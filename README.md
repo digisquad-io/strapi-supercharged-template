@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/digisquad-io/strapi-entreprise-boilerplate" style="display: flex; justify-content: center">
+  <a href="https://github.com/digisquad-io/strapi-supercharged-template" style="display: flex; justify-content: center">
     <img src="https://strapi.io/assets/strapi-logo-dark.svg" height="80px" alt="Strapi logo" />
     <strong style="padding: 5px 25px; font-size: 2em">+</strong>
     <img src="https://static.cdnlogo.com/logos/t/96/typescript.svg" height="60px" alt="Typescript logo" />
@@ -21,14 +21,14 @@
   <p align="center">
     Opinionated strapi configuration with enhanced typings, linters & releases process
     <br />
-    <a href="https://github.com/digisquad-io/strapi-entreprise-boilerplate"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/digisquad-io/strapi-supercharged-template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/digisquad-io/strapi-entreprise-boilerplate">View Demo</a>
+    <a href="https://github.com/digisquad-io/strapi-supercharged-template">View Demo</a>
     ·
-    <a href="https://github.com/digisquad-io/strapi-entreprise-boilerplate/issues">Report Bug</a>
+    <a href="https://github.com/digisquad-io/strapi-supercharged-template/issues">Report Bug</a>
     ·
-    <a href="https://github.com/digisquad-io/strapi-entreprise-boilerplate/issues">Request Feature</a>
+    <a href="https://github.com/digisquad-io/strapi-supercharged-template/issues">Request Feature</a>
   </p>
 </p>
 
@@ -93,9 +93,9 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/digisquad-io/strapi-entreprise-boilerplate.git
+   git clone https://github.com/digisquad-io/strapi-supercharged-template.git
    ```
-   > 🪄 **[Or use this repository as template](https://github.com/digisquad-io/strapi-entreprise-boilerplate/generate)**
+   > 🪄 **[Or use this repository as template](https://github.com/digisquad-io/strapi-supercharged-template/generate)**
 2. Install NPM packages
    ```sh
    npm install # yarn
@@ -138,7 +138,7 @@ _For a complete example, please refer to the [SamplePlugin typings](plugins/samp
 
 ## Roadmap
 
-See the [open issues](https://github.com/digisquad-io/strapi-entreprise-boilerplate/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
+See the [open issues](https://github.com/digisquad-io/strapi-supercharged-template/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
 
 - [ ] Policies typings
 - [ ] Unit testing

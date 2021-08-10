@@ -1,8 +1,8 @@
 {
-  "name": "strapi-entreprise-boilerplate",
+  "name": "strapi-supercharged-template",
   "private": true,
   "version": "0.1.1",
-  "description": "A Strapi application",
+  "description": "A Strapi supercharged application",
   "author": {
     "name": "digisquad.io",
     "url": "https://digisquad.io",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:digisquad-io/strapi-entreprise-boilerplate.git"
+    "url": "git@github.com:digisquad-io/strapi-supercharged-template.git"
   },
   "strapi": {
     "uuid": "35d59bef-2343-4906-9e63-1b78f95028cb"
