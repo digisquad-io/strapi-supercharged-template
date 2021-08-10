@@ -1,16 +1,20 @@
-import type { SampleControllers } from './controllers';
-import type { SampleMiddlewares } from './middlewares';
-import type { SampleServices } from './services';
+import type SamplePluginControllers from './controllers';
+import type SamplePluginMiddlewares from './middlewares';
+import type SamplePluginServices from './services';
 export * as models from './models';
 
 export default interface SamplePlugin {
-  controllers: SampleControllers;
-  middlewares: SampleMiddlewares;
-  services: SampleServices;
+  controllers: SamplePluginControllers;
+  middlewares: SamplePluginMiddlewares;
+  services: SamplePluginServices;
 }
 
 declare global {
-  /* eslint-disable-next-line no-unused-vars */
+  /**
+   * Register SamplePlugin into StrapiPlugins global scope.
+   *
+   * @example strapi.plugins.sample: SamplePlugin
+   */
   interface StrapiPlugins {
     sample: SamplePlugin;
   }

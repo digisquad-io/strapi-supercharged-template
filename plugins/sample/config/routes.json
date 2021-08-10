@@ -1,3 +1,22 @@
 {
-  "routes": []
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hello",
+      "handler": "sample.hello",
+      "config": {
+        "description": "Say hello to the user",
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/empty",
+      "handler": "sample.empty",
+      "config": {
+        "description": "Return empty 200 response",
+        "policies": []
+      }
+    }
+  ]
 }

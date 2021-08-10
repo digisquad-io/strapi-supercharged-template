@@ -34,6 +34,10 @@
       "type": "float",
       "default": 0,
       "min": 0
+    },
+    "articles": {
+      "collection": "article",
+      "via": "products"
     }
   }
 }
