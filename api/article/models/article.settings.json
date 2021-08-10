@@ -10,5 +10,17 @@
     "timestamps": true,
     "comment": ""
   },
-  "attributes": {}
+  "attributes": {
+    "name": {
+      "type": "wysiwyg"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "products": {
+      "collection": "product",
+      "plugin": "sample",
+      "via": "articles"
+    }
+  }
 }

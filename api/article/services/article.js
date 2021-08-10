@@ -6,7 +6,24 @@
  */
 
 module.exports = {
-  articleAction() {
-    console.log('article action');
+  /**
+   * Fetch articles related to a product from sample plugin
+   *
+   * @param {Pick<import('/@plugins/sample/models/product').default, 'id'>} product
+   * @return {Promise<
+   *  import('../models/article').default[]
+   * >}
+   */
+  articlesByProduct({ id }) {
+    /**
+     * @type {import('/@internal/query').StrapiQuery<
+     *  import('../models/article').default
+     * >}
+     */
+    const query = strapi.query('article', 'sample');
+
+    return query.find({
+      product: id,
+    });
   },
 };

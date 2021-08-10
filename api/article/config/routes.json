@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/articles/product/:id",
+      "handler": "article.findByProduct",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/articles/:id",
       "handler": "article.findOne",
       "config": {

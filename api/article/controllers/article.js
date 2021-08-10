@@ -5,4 +5,23 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  /**
+   * List articles related to a product
+   * [GET] /articles/product/:id
+   *
+   * @param {import('/@internal/core').StrapiAppContext} ctx
+   * @return {Promise<
+   *  import('../models/article')
+   * >}
+   */
+  async findByProduct(ctx) {
+    const { id } = ctx.params;
+
+    const articles = await strapi.services.article.articlesByProduct({
+      id,
+    });
+
+    return articles;
+  },
+};
