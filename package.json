@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cssninja-digisquad/cssninja-io-api.git"
+    "url": "git@github.com:digisquad-io/strapi-entreprise-boilerplate.git"
   },
   "strapi": {
     "uuid": "35d59bef-2343-4906-9e63-1b78f95028cb"
