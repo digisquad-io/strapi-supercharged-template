@@ -1,3 +1,6 @@
+/**
+ * @param {import('/@internal/config').default} context
+ */
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
