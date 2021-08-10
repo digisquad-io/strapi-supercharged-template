@@ -38,7 +38,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#javascript-as-typescript-code">“Javscript as Typescript” code</a></li>
-        <li><a href="#goals">Goals</a></li>
+        <li><a href="#-goals">Goals</a></li>
       </ul>
     </li>
     <li>
@@ -51,14 +51,15 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#declare-your-models">Declare your Models</a></li>
-        <li><a href="#register-api-typings">Register API typings</a></li>
-        <li><a href="#register-plugins-typings">Register Plugins typings</a></li>
-        <li><a href="#use-your-supercharged-strapi">Use your Supercharged Strapi</a></li>
+        <li><a href="#-declare-your-models">Declare your Models</a></li>
+        <li><a href="#-register-api-typings">Register API typings</a></li>
+        <li><a href="#-register-plugins-typings">Register Plugins typings</a></li>
+        <li><a href="#-use-your-supercharged-strapi">Use your Supercharged Strapi</a></li>
+        <li><a href="#-packagejson-scrips">`package.json` scrips</a></li>
       </ul>
     </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#-roadmap">Roadmap</a></li>
+    <li><a href="#%EF%B8%8F-contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -69,7 +70,7 @@
 
 ## About The Project
 
-### “Javscript as Typescript” code
+### “Javascript as Typescript” code
 
 Use all power of Typescript directly into your Javascript
 
