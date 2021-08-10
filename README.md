@@ -10,10 +10,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/digisquad-io/strapi-supercharged-template" style="display: flex; justify-content: center">
-    <img src="https://strapi.io/assets/strapi-logo-dark.svg" height="80px" alt="Strapi logo" />
-    <strong style="padding: 5px 25px; font-size: 2em">+</strong>
-    <img src="https://static.cdnlogo.com/logos/t/96/typescript.svg" height="60px" alt="Typescript logo" />
+  <a href="https://github.com/digisquad-io/strapi-supercharged-template">
+    <img src="./.github/images/strapi-supercharged.png" alt="Strapi Supercharged" />
   </a>
 
   <h3 align="center">Strapi Supercharged</h3>
@@ -34,11 +32,12 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <summary><h2>Table of Contents</h2></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#javascript-as-typescript-code">“Javscript as Typescript” code</a></li>
         <li><a href="#goals">Goals</a></li>
       </ul>
     </li>
@@ -49,7 +48,15 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#declare-your-models">Declare your Models</a></li>
+        <li><a href="#register-api-typings">Register API typings</a></li>
+        <li><a href="#register-plugins-typings">Register Plugins typings</a></li>
+        <li><a href="#use-your-supercharged-strapi">Use your Supercharged Strapi</a></li>
+      </ul>
+    </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -66,11 +73,15 @@
 
 Use all power of Typescript directly into your Javascript
 
-[![VSCode auto-completion preview][preview-api-content]](./api/article/controllers/article.js 'VSCode auto-completion preview')
+[![VSCode auto-completion preview][preview-api-content]](api/article/controllers/article.js 'VSCode auto-completion preview')
 
 > **VSCode auto-completion preview**
 
-### Goals
+[![Advanced linter configuration][preview-improved-linters]](scripts/initData.js 'Advanced linter configuration')
+
+> **Advanced linter configuration**
+
+### 🎯 Goals
 
 - Cover **API**, **Plugins** and all **Internal Strapi** typings
 - **Ahead-Of-Time** compilation errors with **Typescript**
@@ -95,7 +106,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/digisquad-io/strapi-supercharged-template.git
    ```
-   > 🪄 **[Or use this repository as template](https://github.com/digisquad-io/strapi-supercharged-template/generate)**
+   > 🚀 **[Or use this repository as template](https://github.com/digisquad-io/strapi-supercharged-template/generate)**
 2. Install NPM packages
    ```sh
    npm install # yarn
@@ -109,43 +120,133 @@ To get a local copy up and running follow these simple steps.
 
 ## Usage
 
-### Register API typings
+### 💡 Declare your Models
+
+> @todo
+
+_For complete examples, please refer to the [Article API model typings](api/article/models/article.d.ts) or the [Product model typings from sample plugin](plugins/sample/models/product.d.ts)_
+
+### 💡 Register API typings
+
+> @todo
 
 _For a complete example, please refer to the [ArticleAPI typings](api/article/index.d.ts)_
 
-### Register Plugins typings
+### 💡 Register Plugins typings
+
+> @todo
 
 _For a complete example, please refer to the [SamplePlugin typings](plugins/sample/index.d.ts)_
 
-### `package.json` scrips
+### 🌠 Use your Supercharged Strapi
 
-| script                          | description                                  |
-| ------------------------------- | -------------------------------------------- |
-| `yarn lint`                     | Run all linter in sequence                   |
-| `yarn lint:eslint`              | Try to fix eslint errors                     |
-| `yarn lint:prettier`            | Try to fix prettier errors                   |
-|                                 |                                              |
-| `yarn test`                     | Run all tests in parallel                    |
-| `yarn test:tsc`                 | Run Typescript compiler (only output errors) |
-| `yarn test:eslint`              | Run eslint in check mode                     |
-| `yarn test:prettier`            | Run prettier in check mode                   |
-|                                 |                                              |
-| `yarn commit`                   | Git commit with prompt                       |
-| `yarn release`                  | Run release creation if test pass            |
-| `yarn release:standard-version` | Create release from git commit history       |
+#### In controllers
+
+> @todo
+
+_For a complete example, please refer to the [Article controller](api/article/controllers/article.js)_
+
+#### In services
+
+> @todo
+
+_For a complete example, please refer to the [Article service](api/article/services/article.js)_
+
+#### In middlewares
+
+> @todo
+
+_For a complete example, please refer to the [Sample middleware (from sample plugin)](plugins/sample/middlewares/sample.js)_
+
+#### In scripts
+
+> @todo
+
+_For a complete example, please refer to the [`scripts/initData.js` demo script](scripts/initData.js)_
+
+### 💲 `package.json` scrips
+
+<table>
+  <thead>
+    <tr>
+      <th>command</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" align="center"><em>Linters</em></td>
+    </tr>
+    <tr>
+      <td><code>yarn lint</code></td>
+      <td>Run all linter in sequence</td>
+    </tr>
+    <tr>
+      <td><code>yarn lint:eslint</code></td>
+      <td>Try to fix eslint errors</td>
+    </tr>
+    <tr>
+      <td><code>yarn lint:prettier</code></td>
+      <td>Try to fix prettier errors</td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><em>Tests</em></td>
+    </tr>
+    <tr>
+      <td><code>yarn test</code></td>
+      <td>Run all tests in parallel</td>
+    </tr>
+    <tr>
+      <td><code>yarn test:tsc</code></td>
+      <td>Run Typescript compiler (only output errors)</td>
+    </tr>
+    <tr>
+      <td><code>yarn test:eslint</code></td>
+      <td>Run eslint in check mode</td>
+    </tr>
+    <tr>
+      <td><code>yarn test:prettier</code></td>
+      <td>Run prettier in check mode</td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><em>Git & Releases utils</em></td>
+    </tr>
+    <tr>
+      <td><code>yarn commit</code></td>
+      <td>Git commit with prompt</td>
+    </tr>
+    <tr>
+      <td><code>yarn release</code></td>
+      <td>Run release creation if test pass</td>
+    </tr>
+    <tr>
+      <td><code>yarn release:standard-version</code></td>
+      <td>Create release from git commit history</td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><em>Others</em></td>
+    </tr>
+    <tr>
+      <td><code>./scripts/initData.js</code></td>
+      <td>Demo script</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- ROADMAP -->
 
-## Roadmap
+## 📅 Roadmap
 
 See the [open issues](https://github.com/digisquad-io/strapi-supercharged-template/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
 
 - [ ] Policies typings
 - [ ] Unit testing
+- [ ] End-2-end Rest API testing
+- [ ] Github actions
 
 <!-- CONTRIBUTING -->
 
-## Contributing
+## 🙋‍♂️ Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -171,9 +272,7 @@ digisquad.io - contact@digisquad.io
 
 ## Acknowledgements
 
-- []()
-- []()
-- []()
+- [Strapi](https://github.com/strapi/strapi)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -191,3 +290,4 @@ digisquad.io - contact@digisquad.io
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/company/digisquad-io
 [preview-api-content]: ./.github/images/preview-api-content.png
+[preview-improved-linters]: ./.github/images/preview-improved-linters.png
