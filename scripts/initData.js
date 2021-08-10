@@ -1,5 +1,4 @@
 #!node
-// @ts-check
 
 const handleCliError = require('./utils/handleCliError.js');
 const loadApp = require('./utils/loadApp.js');
@@ -11,12 +10,6 @@ async function runner() {
   await loadApp();
 
   strapi.log.debug('cli started');
-
-  console.dir(strapi.api.article.config, {
-    depth: 1,
-    colors: true,
-    showHidden: true,
-  });
 
   strapi.stop(1);
   strapi.log.error('this is unreachable code');
