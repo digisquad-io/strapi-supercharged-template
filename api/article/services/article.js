@@ -5,4 +5,8 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+  articleAction() {
+    console.log('article action');
+  },
+};

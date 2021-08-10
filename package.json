@@ -53,6 +53,7 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@commitlint/prompt-cli": "^13.1.0",
     "@types/bookshelf": "^1.2.2",
+    "@types/events": "^3.0.0",
     "@types/koa": "^2.13.4",
     "@types/koa-bodyparser": "^4.3.3",
     "@types/koa-joi-router": "^8.0.1",
