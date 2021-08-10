@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "bierner.github-markdown-preview",
+    "bierner.markdown-checkbox",
+    "bierner.markdown-emoji",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-yaml-preamble"
+  ]
+}
