@@ -11,10 +11,6 @@ export type TimestampFields = {
 export interface Entity {
   id: number;
 }
-
-export type FileEntity = Entity &
-  TimestampFields &
-  Record<string, any>;
 export type FileEntity = Entity &
   TimestampFields & {
     name: string;
