@@ -1,6 +1,7 @@
 // Strapi db
 export interface StrapiConnections extends Record<string, any> {}
 export interface StrapiDBManager<T> {
+  // eslint-disable-next-line @typescript-eslint/no-misused-new
   new <T>(strapi: T): StrapiDBManager<T>;
   initialized: boolean;
   initialize(): Promise<StrapiDBManager<T>>;

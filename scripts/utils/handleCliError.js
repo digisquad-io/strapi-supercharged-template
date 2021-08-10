@@ -6,5 +6,5 @@
 module.exports = function handleCliError(error, exitCode = 1) {
   console.log('er', error);
   strapi?.log?.error(`[cli] an error occured`, error);
-  process.exit(exitCode);
+  return process.exit(exitCode);
 };

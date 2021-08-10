@@ -11,7 +11,7 @@ type SampleProduct = Entity &
     description: string;
     provider: 'aliexpress' | 'amazon';
     publishAt: DateTimeField;
-    user: RelationWith<unknown>;
+    user: RelationWith<Entity>;
   };
 
 export default SampleProduct;

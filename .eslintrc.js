@@ -1,7 +1,9 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:jsdoc/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'google',
@@ -15,12 +17,14 @@ module.exports = {
     jest: true,
   },
   parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: './',
+    sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,
       impliedStrict: true,
     },
-    sourceType: 'module',
   },
   globals: {
     strapi: true,
@@ -32,11 +36,41 @@ module.exports = {
     'no-debugger':
       process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'object-curly-spacing': 'off',
-    'valid-jsdoc': 'off',
-    'max-len': 'off',
+
+    // jsdoc
     'require-jsdoc': 'off',
+    'valid-jsdoc': 'off',
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off',
+    'jsdoc/no-undefined-types': [
+      'warn',
+      {
+        definedTypes: ['never'],
+      },
+    ],
+
+    // JS requirements
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+
+    // @TODO
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-types': 'off',
   },
   settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+    jsdoc: {
+      // mode: 'typescript',
+      tagNamePreference: {
+        param: 'param',
+        returns: 'return',
+      },
+    },
     react: {
       createClass: 'createReactClass', // Regex for Component Factory to use,
       pragma: 'React', // Pragma to use, default to "React"

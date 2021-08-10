@@ -4,6 +4,9 @@
 const handleCliError = require('./utils/handleCliError.js');
 const loadApp = require('./utils/loadApp.js');
 
+/**
+ * @return {Promise<void>}
+ */
 async function runner() {
   await loadApp();
 
@@ -14,5 +17,5 @@ async function runner() {
 }
 
 runner()
-  .then((_) => process.exit(0))
+  .then(() => process.exit(0))
   .catch(handleCliError);

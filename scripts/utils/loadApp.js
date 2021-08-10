@@ -14,8 +14,8 @@ module.exports = async function loadApp() {
   const pkgJSON = require(path.resolve(projectPath, 'package.json'));
   if (
     !pkgJSON ||
-    !pkgJSON.dependencies ||
-    !pkgJSON.dependencies.strapi
+    !pkgJSON?.dependencies ||
+    !pkgJSON?.dependencies.strapi
   ) {
     throw new Error(
       'Unable to load app: missing strapi dependencies from "package.json"'

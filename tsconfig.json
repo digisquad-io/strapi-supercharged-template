@@ -23,6 +23,12 @@
       "/@plugins/*": ["./plugins/*"]
     }
   },
-  "include": ["./**/*.d.ts", "./**/*.js", "./**/*.mjs", "./**/*.ts"],
+  "include": [
+    "./**/*.d.ts",
+    "./**/*.js",
+    "./**/*.mjs",
+    "./**/*.ts",
+    "./.eslintrc.js"
+  ],
   "exclude": ["./node_modules", "admin/src"]
 }

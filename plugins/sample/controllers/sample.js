@@ -9,6 +9,8 @@ module.exports = {
    * @return {Promise<void>}
    */
   hello: async (ctx) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     ctx.body = 'Hello World!';
   },
 
@@ -20,6 +22,8 @@ module.exports = {
    * @return {Promise<void>}
    */
   empty: async (ctx) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     ctx.send = 200;
   },
 };

@@ -14,6 +14,7 @@ export interface StrapiWebhookResult {
   message?: string;
 }
 export interface StrapiWebhookRunner {
+  // eslint-disable-next-line @typescript-eslint/no-misused-new
   new <T>(options: {
     eventHub: StrapiEventHub;
     logger: StrapiLogger;
