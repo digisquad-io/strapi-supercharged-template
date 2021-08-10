@@ -2,14 +2,12 @@ import type { Router } from 'koa-joi-router';
 import type { Server } from 'http';
 import type { EventEmitter } from 'events';
 import type Koa from 'koa';
+import type { Context } from 'koa';
 import type { BaseLogger } from 'pino';
 
 export type StrapiErrors = () => Record<string, Function>;
-export interface StrapiMiddlewareDefinition
-  extends Record<string, any> {
-  initialize(): void | Promise<void>;
-}
 export interface StrapiApp extends Koa {}
+export interface StrapiAppContext extends Context {}
 export interface StrapiLogger extends BaseLogger {}
 export interface StrapiRouter extends Router {}
 export interface StrapiServer extends Server {}

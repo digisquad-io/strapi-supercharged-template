@@ -12,6 +12,12 @@ async function runner() {
 
   strapi.log.debug('cli started');
 
+  console.dir(strapi.api.article.config, {
+    depth: 1,
+    colors: true,
+    showHidden: true,
+  });
+
   strapi.stop(1);
   strapi.log.error('this is unreachable code');
 }

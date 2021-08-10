@@ -1,3 +1,14 @@
+export interface StrapiMiddlewareDefinition
+  extends Record<string, any> {
+  initialize(): void | Promise<void>;
+}
+export interface StrapiAPIDefinition {
+  config: Record<string, any>;
+  models: Record<string, any>;
+  controllers: Record<string, any>;
+  services: Record<string, any>;
+}
+
 export interface StrapiBaseApi extends Record<string, any> {}
 export interface StrapiBaseComponents extends Record<string, any> {}
 export interface StrapiBaseConfig extends Record<string, any> {}
