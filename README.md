@@ -17,7 +17,7 @@
   <h3 align="center">Strapi Supercharged</h3>
 
   <p align="center">
-    Opinionated strapi configuration with enhanced typings, linters & releases process
+    Opinionated strapi configuration with enhanced typing, linters & releases process
     <br />
     <a href="https://github.com/digisquad-io/strapi-supercharged-template"><strong>Explore the docs »</strong></a>
     <br />
@@ -52,8 +52,8 @@
       <a href="#usage">Usage</a>
       <ul>
         <li><a href="#-declare-your-models">Declare your Models</a></li>
-        <li><a href="#-register-api-typings">Register API typings</a></li>
-        <li><a href="#-register-plugins-typings">Register Plugins typings</a></li>
+        <li><a href="#-register-api-typing">Register API typing</a></li>
+        <li><a href="#-register-plugins-typing">Register Plugins typing</a></li>
         <li><a href="#-use-your-supercharged-strapi">Use your Supercharged Strapi</a></li>
         <li><a href="#-packagejson-scrips">`package.json` scrips</a></li>
       </ul>
@@ -84,12 +84,12 @@ Use all power of Typescript directly into your Javascript
 
 ### 🎯 Goals
 
-- Cover **API**, **Plugins** and all **Internal Strapi** typings
+- Cover **API**, **Plugins** and all **Internal Strapi** typing
 - **Ahead-Of-Time** compilation errors with **Typescript**
-- Higly **extensible** definitions
+- Highly **extensible** definitions
 - **Linters** with all recommendation enabled _(eslint+prettier)_
 - **React** linters for admin customization
-- Follow **standard** [conventional-commits](https://www.conventionalcommits.org) and releases process
+- Follows **standard** [conventional-commits](https://www.conventionalcommits.org) and releases process
 
 <!-- GETTING STARTED -->
 
@@ -125,19 +125,19 @@ To get a local copy up and running follow these simple steps.
 
 > @todo
 
-_For complete examples, please refer to the [Article API model typings](api/article/models/article.d.ts) or the [Product model typings from sample plugin](plugins/sample/models/product.d.ts)_
+_For complete examples, please refer to the [Article API model typing](api/article/models/article.d.ts) or the [Product model typing from sample plugin](plugins/sample/models/product.d.ts)_
 
-### 💡 Register API typings
-
-> @todo
-
-_For a complete example, please refer to the [ArticleAPI typings](api/article/index.d.ts)_
-
-### 💡 Register Plugins typings
+### 💡 Register API typing
 
 > @todo
 
-_For a complete example, please refer to the [SamplePlugin typings](plugins/sample/index.d.ts)_
+_For a complete example, please refer to the [ArticleAPI typing](api/article/index.d.ts)_
+
+### 💡 Register Plugins typing
+
+> @todo
+
+_For a complete example, please refer to the [SamplePlugin typing](plugins/sample/index.d.ts)_
 
 ### 🌠 Use your Supercharged Strapi
 
@@ -240,7 +240,7 @@ _For a complete example, please refer to the [`scripts/initData.js` demo script]
 
 See the [open issues](https://github.com/digisquad-io/strapi-supercharged-template/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
 
-- [ ] Policies typings
+- [ ] Policies typing
 - [ ] Unit testing
 - [ ] End-2-end Rest API testing
 - [ ] Github actions
