@@ -1,0 +1,28 @@
+{
+  "typeAcquisition": {
+    "enable": false
+  },
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "target": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "declaration": false,
+    "outDir": "./never",
+    "paths": {
+      "/@internal/*": ["./types/*"],
+      "/@api/*": ["./api/*"],
+      "/@plugins/*": ["./plugins/*"]
+    }
+  },
+  "include": ["./**/*.d.ts", "./**/*.js"],
+  "exclude": ["./node_modules", "admin/src"]
+}

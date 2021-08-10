@@ -1,0 +1,39 @@
+{
+  "collectionName": "sample_products",
+  "info": {
+    "name": "Sample Plugin - Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "provider": {
+      "type": "enumeration",
+      "enum": ["aliexpress", "amazon"],
+      "default": "aliexpress"
+    },
+    "publishAt": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "float",
+      "default": 0,
+      "min": 0
+    },
+    "stocks": {
+      "type": "float",
+      "default": 0,
+      "min": 0
+    }
+  }
+}
