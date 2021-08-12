@@ -1,4 +1,4 @@
-export default interface StrapiConfigContext {
+export interface StrapiConfigContext {
   env: (<T = string>(key: string, initial?: T) => T) & {
     int: (key: string, initial?: number) => number;
     float: (key: string, initial?: number) => number;

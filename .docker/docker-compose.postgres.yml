@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  strapi:
+    depends_on:
+      - postgresql
+    environment:
+      STRAPI_DB_CLIENT: postgresql
+      STRAPI_DB_HOST: postgresql
+      STRAPI_DB_PORT: 5432
+      STRAPI_DB_USERNAME: '${POSTGRESQL_USERNAME:-user}'
+      STRAPI_DB_PASSWORD: '${POSTGRESQL_PASSWORD:-unsecure-password}'
+      STRAPI_DB_DATABASE: '${POSTGRESQL_DATABASE:-strapi}'
+
+  postgresql:
+    image: bitnami/postgresql:13
+    restart: unless-stopped
+    networks:
+      - strapi-supercharged-network
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRESQL_USERNAME: '${POSTGRESQL_USERNAME:-user}'
+      POSTGRESQL_PASSWORD: '${POSTGRESQL_PASSWORD:-unsecure-password}'
+      POSTGRESQL_DATABASE: '${POSTGRESQL_DATABASE:-strapi}'
+
+volumes:
+  postgresql-data:
+    driver: local
+
+networks:
+  strapi-supercharged-network:

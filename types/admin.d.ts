@@ -13,7 +13,7 @@ export interface StrapiAdminServices {
   };
 }
 
-export default interface StrapiAdmin {
+export interface StrapiAdmin {
   domain: StrapiAdminDomain;
   models: StrapiAdminModels;
   services: StrapiAdminServices;

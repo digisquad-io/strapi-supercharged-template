@@ -1,5 +1,5 @@
 /**
- * @param {import('/@internal/config').default} context
+ * @param {import('/@internal/config').StrapiConfigContext} context
  * @return {any}
  */
 module.exports = ({ env }) => ({
@@ -8,8 +8,13 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'bookshelf',
       settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        client: env('STRAPI_DB_CLIENT', 'sqlite'),
+        filename: env('STRAPI_DB_FILENAME', '.tmp/data.db'),
+        host: env('STRAPI_DB_HOST'),
+        port: env.int('STRAPI_DB_PORT'),
+        database: env('STRAPI_DB_DATABASE'),
+        username: env('STRAPI_DB_USERNAME'),
+        password: env('STRAPI_DB_PASSWORD'),
       },
       options: {
         useNullAsDefault: true,

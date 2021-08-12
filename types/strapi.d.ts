@@ -1,6 +1,6 @@
 import type { Model } from 'bookshelf';
 import type { Entity } from './entities';
-import type StrapiAdmin from './admin';
+import type { StrapiAdmin } from './admin';
 
 import type {
   StrapiBaseApi,

@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  strapi:
+    image: strapi-supercharged:latest
+    build: .
+    restart: unless-stopped
+    networks:
+      - strapi-supercharged-network
+    volumes:
+      - ./.env:/app/.env:ro
+      - strapi-uploads-data:/app/public/uploads
+
+volumes:
+  strapi-uploads-data:
+    driver: local
+
+networks:
+  strapi-supercharged-network:

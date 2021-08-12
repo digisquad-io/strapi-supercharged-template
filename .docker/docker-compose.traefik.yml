@@ -1,0 +1,48 @@
+version: '3.7'
+
+services:
+  strapi:
+    labels:
+      traefik.enable: true
+      traefik.docker.network: 'services'
+      traefik.http.services.strapi-https.loadbalancer.server.port: 1337
+      traefik.http.routers.strapi.entrypoints: 'http'
+      traefik.http.routers.strapi.rule: 'Host(`api.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.strapi.middlewares: 'https-redirect@file'
+      traefik.http.routers.strapi-https.rule: 'Host(`api.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.strapi-https.tls: true
+      traefik.http.routers.strapi-https.entrypoints: 'https'
+      traefik.http.routers.strapi-https.tls.certresolver: 'http'
+
+  traefik:
+    image: traefik:v2.5
+    restart: unless-stopped
+    networks:
+      - strapi-supercharged-network
+    ports:
+      - '80:80'
+      - '443:443/udp'
+      - '443:443/tcp'
+    environment:
+      TRAEFIK_EXPERIMENTAL_HTTP3: 'true'
+      TRAEFIK_ENTRYPOINTS_HTTPS_ENABLEHTTP3: 'true'
+    command:
+      - '--experimental.http3=true'
+      - '--providers.docker=true'
+      - '--providers.docker.exposedbydefault=false'
+      - '--providers.file.filename=/middlewares.yml'
+      - '--entrypoints.http.address=:80'
+      - '--entrypoints.https.address=:443'
+      - '--entrypoints.https.enablehttp3=true'
+      - '--certificatesresolvers.http=true'
+      - '--certificatesresolvers.http.acme.email=admin@example.com'
+      - '--certificatesresolvers.http.acme.storage=acme.json'
+      - '--certificatesresolvers.http.acme.httpchallenge=true'
+      - '--certificatesresolvers.http.acme.httpchallenge.entrypoint=http'
+      - '--api.dashboard=false'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./.docker/traefik/acme.json:/acme.json
+      - ./.docker/traefik/middlewares.yml:/middlewares.yml
+networks:
+  strapi-supercharged-network:
