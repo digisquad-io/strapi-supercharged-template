@@ -12,7 +12,7 @@ module.exports = {
    *
    * @param {import('/@internal/core').StrapiAppContext} ctx
    * @return {Promise<
-   *  import('../models/article')
+   *  import('/@api/article/models').Article[]
    * >}
    */
   async findByProduct(ctx) {

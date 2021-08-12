@@ -9,7 +9,7 @@ const loadApp = require('./utils/loadApp.js');
 async function runner() {
   await loadApp();
 
-  strapi.log.debug('cli started');
+  strapi.log.debug('[cli] started');
 
   strapi.stop(1);
   strapi.log.error('this is unreachable code');

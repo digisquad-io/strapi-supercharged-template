@@ -1,1 +1,1 @@
-export { default as Article } from './models/article';
+export type { Article } from './models/article';

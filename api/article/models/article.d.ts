@@ -6,7 +6,7 @@ import type {
 
 import type { models as SamplePluginModels } from '/@plugins/sample';
 
-type Article = Entity &
+export type Article = Entity &
   TimestampFields & {
     name: string;
     content: string;

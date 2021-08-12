@@ -1,4 +1,3 @@
-// @ts-check
 const path = require('path');
 
 /**
@@ -24,5 +23,4 @@ module.exports = async function loadApp() {
 
   // load() will register strapi in global scope
   await strapi({ dir: projectPath }).load();
-  console.log('?');
 };

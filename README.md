@@ -212,6 +212,7 @@ _For a complete example, please refer to the [`scripts/initData.js` demo script]
     <tr>
       <td colspan="2" align="center"><em>Git & Releases utils</em></td>
     </tr>
+    
     <tr>
       <td><code>yarn commit</code></td>
       <td>Git commit with prompt</td>
@@ -228,7 +229,7 @@ _For a complete example, please refer to the [`scripts/initData.js` demo script]
       <td colspan="2" align="center"><em>Others</em></td>
     </tr>
     <tr>
-      <td><code>./scripts/initData.js</code></td>
+      <td><code>./scripts/empty-script.js</code></td>
       <td>Demo script</td>
     </tr>
   </tbody>

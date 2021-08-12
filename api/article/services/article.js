@@ -11,7 +11,7 @@ module.exports = {
    *
    * @param {Pick<import('/@plugins/sample/models/product').default, 'id'>} product
    * @return {Promise<
-   *  import('../models/article').default[]
+   *  import('/@api/article/models').Article[]
    * >}
    */
   articlesByProduct({ id }) {

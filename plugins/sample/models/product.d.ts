@@ -7,7 +7,7 @@ import type {
 } from '/@internal/entities';
 import type Article from '/@api/article/models/article';
 
-type Product = Entity &
+export type Product = Entity &
   TimestampFields & {
     name: string;
     description: string;
