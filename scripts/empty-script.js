@@ -11,6 +11,12 @@ async function runner() {
 
   strapi.log.debug('[cli] started');
 
+  console.dir(strapi.components['meta.metadata'], {
+    depth: 0,
+    colors: true,
+    showHidden: true,
+  });
+
   strapi.stop(1);
   strapi.log.error('this is unreachable code');
 }

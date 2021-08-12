@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "collectionName": "sample_products",
   "info": {
     "name": "Sample Plugin - Product",
@@ -41,8 +42,9 @@
       "min": 0
     },
     "articles": {
+      "via": "products",
       "collection": "article",
-      "via": "products"
+      "dominant": true
     }
   }
 }

@@ -240,7 +240,7 @@ _For a complete example, please refer to the [`scripts/initData.js` demo script]
 
 See the [open issues](https://github.com/digisquad-io/strapi-supercharged-template/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
 
-- [ ] Components typing
+- [x] Components typing
 - [ ] Policies typing
 - [ ] Unit testing
 - [ ] End-2-end Rest API testing
