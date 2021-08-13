@@ -87,7 +87,6 @@ Use all power of Typescript directly into your Javascript
 
 > **Default services & controllers typing**
 
-
 ### 🎯 Goals
 
 - Cover **API**, **Plugins** and all **Internal Strapi** typing
