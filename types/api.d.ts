@@ -1,8 +1,10 @@
 import { StrapiAppContext } from './core';
-import { Entity } from './entities';
+import { CollectionEntity, SingleTypeEntity } from './entities';
 import { StrapiQueryFilters, StrapiQueryPopulate } from './query';
 
-export interface StrapiBaseCollectionController<T extends Entity> {
+export interface StrapiBaseCollectionController<
+  T extends CollectionEntity
+> {
   find(ctx: StrapiAppContext): Promise<T[]>;
   findOne(ctx: StrapiAppContext): Promise<T>;
   count(ctx: StrapiAppContext): Promise<number>;
@@ -11,13 +13,17 @@ export interface StrapiBaseCollectionController<T extends Entity> {
   delete(ctx: StrapiAppContext): Promise<T>;
 }
 
-export interface StrapiBaseSingleTypeController<T extends Entity> {
+export interface StrapiBaseSingleTypeController<
+  T extends SingleTypeEntity
+> {
   find(ctx: StrapiAppContext): Promise<T>;
   update(ctx: StrapiAppContext): Promise<T>;
   delete(ctx: StrapiAppContext): Promise<T>;
 }
 
-export interface StrapiBaseCollectionService<T extends Entity> {
+export interface StrapiBaseCollectionService<
+  T extends CollectionEntity
+> {
   find(
     params: StrapiQueryFilters,
     populate?: StrapiQueryPopulate
@@ -41,7 +47,9 @@ export interface StrapiBaseCollectionService<T extends Entity> {
   countSearch(params: StrapiQueryFilters): Promise<number>;
 }
 
-export interface StrapiBaseSingleTypeService<T extends Entity> {
+export interface StrapiBaseSingleTypeService<
+  T extends SingleTypeEntity
+> {
   find(
     params: StrapiQueryFilters,
     populate?: StrapiQueryPopulate

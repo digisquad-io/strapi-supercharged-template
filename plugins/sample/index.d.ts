@@ -1,9 +1,9 @@
-import type SamplePluginControllers from './controllers';
-import type SamplePluginMiddlewares from './middlewares';
-import type SamplePluginServices from './services';
+import type { SamplePluginControllers } from './controllers';
+import type { SamplePluginMiddlewares } from './middlewares';
+import type { SamplePluginServices } from './services';
 export * as models from './models';
 
-export default interface SamplePlugin {
+export interface SamplePlugin {
   controllers: SamplePluginControllers;
   middlewares: SamplePluginMiddlewares;
   services: SamplePluginServices;

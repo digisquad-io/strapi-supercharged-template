@@ -15,5 +15,3 @@ export type Metadata = Component & {
     | 'player';
   twitterUsername?: string;
 };
-
-export default Metadata;

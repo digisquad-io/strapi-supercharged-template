@@ -1,5 +1,5 @@
 import sample from './middlewares/sample';
 
-export default interface SamplePluginMiddlewares {
+export interface SamplePluginMiddlewares {
   sample: typeof sample;
 }

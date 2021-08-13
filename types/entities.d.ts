@@ -3,6 +3,8 @@
 export interface Entity {
   id: number;
 }
+export interface CollectionEntity extends Entity {}
+export interface SingleTypeEntity extends Entity {}
 export interface Component extends Entity {}
 export type RelationWith<T extends Entity> = T | number | null;
 
@@ -16,9 +18,9 @@ export type TimestampFields = {
 };
 
 // @todo: strapi-plugin-user-permissions
-export type UserEntity = Entity & {};
-export type RoleEntity = Entity & {};
-export type PermissionEntity = Entity & {};
+export type UserEntity = CollectionEntity & {};
+export type RoleEntity = CollectionEntity & {};
+export type PermissionEntity = CollectionEntity & {};
 
 // @todo: strapi-plugin-upload
 export type FileEntity = Entity &

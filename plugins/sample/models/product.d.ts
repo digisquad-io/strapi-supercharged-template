@@ -1,13 +1,13 @@
 import type {
-  Entity,
   UserEntity,
   DateTimeField,
   TimestampFields,
   RelationWith,
+  CollectionEntity,
 } from '/@internal/entities';
-import type Article from '/@api/article/models/article';
+import type { Article } from '/@api/article/models';
 
-export type Product = Entity &
+export type Product = CollectionEntity &
   TimestampFields & {
     name: string;
     description: string;
@@ -16,5 +16,3 @@ export type Product = Entity &
     user: RelationWith<UserEntity>;
     articles: RelationWith<Article>[];
   };
-
-export default Product;

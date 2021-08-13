@@ -9,7 +9,7 @@ module.exports = {
   /**
    * Fetch articles related to a product from sample plugin
    *
-   * @param {Pick<import('/@plugins/sample/models/product').default, 'id'>} product
+   * @param {Pick<import('/@plugins/sample/models').Product, 'id'>} product
    * @return {Promise<
    *  import('/@api/article/models').Article[]
    * >}
@@ -17,7 +17,7 @@ module.exports = {
   articlesByProduct({ id }) {
     /**
      * @type {import('/@internal/query').StrapiQuery<
-     *  import('../models/article').default
+     *  import('/@api/article/models').Article
      * >}
      */
     const query = strapi.query('article', 'sample');

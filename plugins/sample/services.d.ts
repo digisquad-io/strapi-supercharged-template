@@ -1,5 +1,5 @@
 import sample from './services/sample';
 
-export default interface SamplePluginServices {
+export interface SamplePluginServices {
   sample: typeof sample;
 }
