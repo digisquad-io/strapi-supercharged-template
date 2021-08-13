@@ -79,9 +79,14 @@ Use all power of Typescript directly into your Javascript
 
 > **VSCode auto-completion preview**
 
-[![Advanced linter configuration][preview-improved-linters]](scripts/initData.js 'Advanced linter configuration')
+[![Advanced linter configuration][preview-improved-linters]](scripts/empty-script.js 'Advanced linter configuration')
 
 > **Advanced linter configuration**
+
+[![Default services & controllers typing][preview-default-controllers-override]](api/article/controllers.d.ts 'Default services & controllers typing')
+
+> **Default services & controllers typing**
+
 
 ### 🎯 Goals
 
@@ -297,3 +302,4 @@ digisquad.io - contact@digisquad.io
 [linkedin-url]: https://linkedin.com/company/digisquad-io
 [preview-api-content]: ./.github/images/preview-api-content.png
 [preview-improved-linters]: ./.github/images/preview-improved-linters.png
+[preview-default-controllers-override]: ./.github/images/preview-default-controllers-override.png
