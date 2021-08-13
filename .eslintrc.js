@@ -4,8 +4,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jsdoc/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'google',
     'prettier',
   ],
@@ -13,8 +11,6 @@ module.exports = {
     commonjs: true,
     es6: true,
     node: true,
-    browser: true,
-    jest: true,
   },
   parserOptions: {
     project: './tsconfig.json',
@@ -22,7 +18,6 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
-      jsx: true,
       impliedStrict: true,
     },
   },
@@ -72,27 +67,5 @@ module.exports = {
         returns: 'return',
       },
     },
-    react: {
-      createClass: 'createReactClass', // Regex for Component Factory to use,
-      pragma: 'React', // Pragma to use, default to "React"
-      fragment: 'Fragment', // Fragment to use (may be a property of <pragma>), default to "Fragment"
-      version: 'detect', // React version. "detect" automatically picks the version you have installed.
-      flowVersion: '0.53', // Flow version
-    },
-    propWrapperFunctions: [
-      'forbidExtraProps',
-      { property: 'freeze', object: 'Object' },
-      { property: 'myFavoriteWrapper' },
-    ],
-    componentWrapperFunctions: [
-      'observer',
-      { property: 'styled' },
-      { property: 'observer', object: 'Mobx' },
-      { property: 'observer', object: '<pragma>' },
-    ],
-    linkComponents: [
-      'Hyperlink',
-      { name: 'Link', linkAttribute: 'to' },
-    ],
   },
 };

@@ -1,6 +1,6 @@
 {
   "typeAcquisition": {
-    "enable": false
+    "enable": true
   },
   "compilerOptions": {
     "lib": ["esnext"],
@@ -12,34 +12,19 @@
     "allowJs": true,
     "checkJs": true,
     "strict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
     "baseUrl": ".",
     "noEmit": true,
     "declaration": false,
-    "outDir": "./never",
-    "paths": {
-      "/@internal/*": ["./types/*"],
-      "/@components/*": ["./components/*"],
-      "/@api/*": ["./api/*"],
-      "/@plugins/*": ["./plugins/*"]
-    }
+    "outDir": "./never"
   },
-  "include": [
-    "**/*.d.ts",
-    "**/*.js",
-    "**/*.mjs",
-    "**/*.ts",
-    ".eslintrc.js"
-  ],
   "exclude": [
     "build",
     ".cache",
     "exports",
     "public",
     "node_modules",
-    "**/node_modules/*",
-    "admin/src",
-    "**/admin/src/*"
+    "**/node_modules/*"
   ]
 }

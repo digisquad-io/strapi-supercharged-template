@@ -1,6 +1,11 @@
 .cache
 .tmp
 build
+exports
+admin/src
+node_modules
+coverage
+**/admin/src/**
 **/node_modules/**
 **/coverage/**
 dump-config.json
