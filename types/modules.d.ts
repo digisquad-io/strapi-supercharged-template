@@ -1,9 +1,15 @@
 declare module 'strapi-utils' {
-  export type ModelOf<T> = any | T;
+  type StrapiAppContext = any;
+  type ModelOf<T> = any | T;
   export function sanitizeEntity<T>(
     entity: T,
     options: {
       model: ModelOf<T>;
     }
-  ): T;
+  ): Partial<T>;
+
+  export function parseMultipartData(ctx: StrapiAppContext): {
+    data: any;
+    files: any;
+  };
 }
