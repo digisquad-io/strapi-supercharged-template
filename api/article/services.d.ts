@@ -8,9 +8,9 @@ export interface ArticleServices {
 
 declare global {
   /**
-   * Register ArticleControllers into StrapiControllers global scope.
+   * Register ArticleServices into StrapiServices global scope.
    *
-   * @example strapi.controllers.article: ArticleControllers
+   * @example strapi.services.article: ArticleServices
    */
   interface StrapiServices extends ArticleServices {}
 }
