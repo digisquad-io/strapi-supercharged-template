@@ -56,6 +56,7 @@
         <li><a href="#-register-plugins-typing">Register Plugins typing</a></li>
         <li><a href="#-use-your-supercharged-strapi">Use your Supercharged Strapi</a></li>
         <li><a href="#-packagejson-scrips">`package.json` scrips</a></li>
+        <li><a href="#-docker-utils">docker utils</a></li>
       </ul>
     </li>
     <li><a href="#-roadmap">Roadmap</a></li>
@@ -234,17 +235,18 @@ _For a complete example, please refer to the [`scripts/initData.js` demo script]
   </tbody>
 </table>
 
+### 📦 docker utils
+
+> @todo
+
+_For a complete example, please refer to the [`Dockerfile`](Dockerfile) and [`.docker` folder](.docker/)_
+
 <!-- ROADMAP -->
 
 ## 📅 Roadmap
 
-See the [open issues](https://github.com/digisquad-io/strapi-supercharged-template/issues) for a list of proposed features (and known issues). Note that thoses features are in work in progress:
-
-- [x] Components typing
-- [ ] Policies typing
-- [ ] Unit testing
-- [ ] End-2-end Rest API testing
-- [ ] Github actions
+See the [roadmap project board](https://github.com/digisquad-io/strapi-supercharged-template/projects/1) for a list of proposed features (and known issues).
+Feel free to open a [new discussion](https://github.com/digisquad-io/strapi-supercharged-template/discussions), this project aims to be collaborative!
 
 <!-- CONTRIBUTING -->
 
@@ -257,6 +259,8 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'feat(amazing-feature): add something amazing'`)
 4. Push to the Branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+> :octocat: **tip**: try to use <kbd>.</kbd> keyboard shortcut on this repository _(or <kbd>shift</kbd>+<kbd>;</kbd>)_
 
 <!-- LICENSE -->
 
