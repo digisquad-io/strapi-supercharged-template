@@ -90,7 +90,7 @@
     "knex": "0.21.18",
     "koa-joi-router": "^8.0.0",
     "pg": "^8.7.1",
-    "strapi": "3.6.7",
+    "strapi": "3.6.8",
     "strapi-admin": "3.6.7",
     "strapi-connector-bookshelf": "3.6.7",
     "strapi-plugin-content-manager": "3.6.7",
