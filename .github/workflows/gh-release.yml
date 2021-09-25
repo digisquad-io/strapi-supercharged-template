@@ -1,0 +1,30 @@
+name: Releases
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    name: Releases
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up dockertags and tag meta
+        id: meta
+        run: |
+          echo ::set-output name=tag::${GITHUB_REF#refs/tags/}
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: Supercharged ${{ steps.meta.outputs.tag }}
+          body: View [CHANGELOG.md](https://github.com/digisquad-io/strapi-supercharged-template/blob/master/CHANGELOG.md) for details
+          draft: false
+          prerelease: false
+          discussion_category_name: announcements
