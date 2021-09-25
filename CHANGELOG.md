@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.2...v0.1.3) (2021-09-25)
+
+
+### Features
+
+* **typing:** add sanitize and parseMultipartData definitions ([d38ecbd](https://github.com/digisquad-io/strapi-supercharged-template/commit/d38ecbdb6fe2e55f9a6b98f5a97f6e3edef8f16e))
+* **typing:** add strapi app defaut context, state and body requests ([98bbb34](https://github.com/digisquad-io/strapi-supercharged-template/commit/98bbb340f5c887808e4dac30c44ed63d48b0dceb))
+
+
+### Bug Fixes
+
+* **entities:** add component interface ([4a5653f](https://github.com/digisquad-io/strapi-supercharged-template/commit/4a5653f42c1700e9adf03467f6382789a6a33edc))
+* package.json & yarn.lock to reduce vulnerabilities ([26cd09e](https://github.com/digisquad-io/strapi-supercharged-template/commit/26cd09ef642d073706d06fa6d62f9e2898bf6189))
+* **single-types:** find return type ([9a33e47](https://github.com/digisquad-io/strapi-supercharged-template/commit/9a33e473546e23e266eb439006622a2b20af8e86))
+* **typing:** base api optional parameters ([780952d](https://github.com/digisquad-io/strapi-supercharged-template/commit/780952de7b3b4c4857f6e5e84bf28693ad641dba))
+
 ### [0.1.2](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.1...v0.1.2) (2021-08-13)
 
 
