@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.4...v0.2.0) (2021-09-25)
+
+
+### Features
+
+* **actions:** add gh release action ([e48bee6](https://github.com/digisquad-io/strapi-supercharged-template/commit/e48bee6bdeb7f58c467cba13f23d0e90ffb6a082))
+
+
+### Bug Fixes
+
+* **config:** configuration should be extensible ([4239024](https://github.com/digisquad-io/strapi-supercharged-template/commit/423902485ec43a5ea48bf93693ee85dd4801ec84))
+
 ### [0.1.4](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.3...v0.1.4) (2021-09-25)
 
 
