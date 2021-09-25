@@ -22,5 +22,5 @@ module.exports = async function loadApp() {
   }
 
   // load() will register strapi in global scope
-  await strapi({ dir: projectPath }).load();
+  await strapi({ dir: projectPath, serveAdminPanel: false }).load();
 };
