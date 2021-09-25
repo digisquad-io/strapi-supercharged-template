@@ -16,6 +16,7 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: './',
     sourceType: 'module',
+    extraFileExtensions: ['.mjs'],
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       impliedStrict: true,

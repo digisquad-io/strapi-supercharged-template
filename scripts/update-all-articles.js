@@ -1,7 +1,7 @@
 #!node
 
-const handleCliError = require('./utils/handleCliError.js');
-const loadApp = require('./utils/loadApp.js');
+const { handleCliError } = require('./utils/handleCliError.js');
+const { loadApp } = require('./utils/loadApp.js');
 
 /**
  * @yields {import('/@api/article/models').Article}
@@ -44,7 +44,7 @@ async function runner() {
           name: article.name + ' updated!',
         }
       );
-    } catch (error) {
+    } catch (/** @type {any} */ error) {
       strapi.log.error(`[update-all-articles] an error occured`);
       strapi.log.error(error);
     }

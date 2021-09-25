@@ -1,7 +1,7 @@
 #!node
 
-const handleCliError = require('./utils/handleCliError.js');
-const loadApp = require('./utils/loadApp.js');
+const { handleCliError } = require('./utils/handleCliError.js');
+const { loadApp } = require('./utils/loadApp.js');
 
 /**
  * @return {Promise<void>}
