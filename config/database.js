@@ -1,6 +1,6 @@
 /**
  * @param {import('/@internal/config').StrapiConfigContext} context
- * @return {any}
+ * @return {import('/@internal/config').StrapiConfigDatabase}
  */
 module.exports = ({ env }) => ({
   defaultConnection: 'default',

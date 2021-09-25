@@ -18,4 +18,11 @@ declare global {
   interface StrapiPlugins {
     sample: SamplePlugin;
   }
+
+  // extends configuration for ./config/plugins.js
+  interface StrapiConfigPlugins {
+    sample?: {
+      optionalString?: string;
+    };
+  }
 }
