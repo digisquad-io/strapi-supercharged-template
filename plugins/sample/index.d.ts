@@ -20,7 +20,7 @@ declare global {
   }
 
   // extends configuration for ./config/plugins.js
-  interface StrapiConfigPlugins {
+  interface StrapiConfigPluginSettings {
     sample?: {
       optionalString?: string;
     };

@@ -269,9 +269,11 @@ export interface StrapiConfigAPI extends Record<string, any> {
     maxLimit?: number | null;
   };
 }
-export interface StrapiConfigBasePlugins
-  extends Record<string, any> {}
+export interface StrapiConfigPlugins
+  extends StrapiConfigPluginSettings {}
 export interface StrapiConfigBaseHookSettings
+  extends Record<string, any> {}
+export interface StrapiConfigBasePluginSettings
   extends Record<string, any> {}
 export interface StrapiConfigBaseMiddlewareSettings
   extends Record<string, any> {

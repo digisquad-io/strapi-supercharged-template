@@ -14,10 +14,11 @@ import {
   StrapiConfigAPI,
   StrapiConfigBaseHookSettings,
   StrapiConfigBaseMiddlewareSettings,
-  StrapiConfigBasePlugins,
+  StrapiConfigBasePluginSettings,
   StrapiConfigDatabase,
   StrapiConfigHooks,
   StrapiConfigMiddlewares,
+  StrapiConfigPlugins,
   StrapiConfigServer,
 } from './config';
 
@@ -36,7 +37,8 @@ declare global {
     extends StrapiConfigBaseHookSettings {}
   interface StrapiConfigMiddlewareSettings
     extends StrapiConfigBaseMiddlewareSettings {}
-  interface StrapiConfigPlugins extends StrapiConfigBasePlugins {}
+  interface StrapiConfigPluginSettings
+    extends StrapiConfigBasePluginSettings {}
 
   interface StrapiConfig extends StrapiBaseConfig {
     database?: StrapiConfigDatabase;
