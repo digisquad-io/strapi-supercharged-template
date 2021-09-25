@@ -53,7 +53,7 @@ export interface StrapiBaseSingleTypeService<
   find(
     params?: StrapiQueryFilters,
     populate?: StrapiQueryPopulate
-  ): Promise<T[]>;
+  ): Promise<T>;
   createOrUpdate(
     data: Partial<Omit<T, 'id'>>,
     options?: { files: any }
