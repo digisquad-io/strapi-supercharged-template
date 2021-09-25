@@ -84,11 +84,11 @@ export interface StrapiConfigServer extends Record<string, any> {
   /**
    * Listens on a socket.
    *
-   * Host and port are cosmetic when this option is provided and likewise use url
+   * `host` and `port` are cosmetic when this option is provided and likewise use url
    * to generate proper urls when using this option.
    *
    * This option is useful for running a server without exposing a port and using proxy servers on the same machine
-   * (e.g Heroku nginx buildpack (opens new window))
+   * (e.g Heroku nginx buildpack)
    *
    * @default '/tmp/nginx.socket'
    */
@@ -104,22 +104,25 @@ export interface StrapiConfigServer extends Record<string, any> {
    * Public url of the server.
    *
    * Required for many different features (ex: reset password, third login providers etc.).
-   * Also enables proxy support such as Apache or Nginx, example: https://mywebsite.com/api.
    *
-   * The url can be relative, if so, it is used with http://${host}:${port} as the base url.
+   * Also enables proxy support such as Apache or Nginx, example: `https://mywebsite.com/api`.
+   *
+   * The url can be relative, if so, it is used with `http://${host}:${port}` as the base url.
    * An absolute url is however recommended.
    *
    * @default ''
    */
   url?: string;
   /**
-   * Set the koa variable app.proxy. When true, proxy header fields will be trusted.
+   * Set the koa variable `app.proxy`.
+   *
+   * When `true`, proxy header fields will be trusted.
    *
    * @default false
    */
   proxy?: boolean;
   /**
-   * Cron configuration (powered by node-schedule (opens new window))
+   * Cron configuration (powered by `node-schedule`)
    */
   cron?: {
     /**
@@ -191,14 +194,14 @@ export interface StrapiConfigServer extends Record<string, any> {
     watchIgnoreFiles?: string[];
     /**
      * Use a different host for the admin panel.
-     * Only used along with strapi develop --watch-admin
+     * Only used along with `strapi develop --watch-admin`
      *
      * @default 'localhost'
      */
     host?: string;
     /**
      * Use a different port for the admin panel.
-     * Only used along with strapi develop --watch-admin
+     * Only used along with `strapi develop --watch-admin`
      *
      * @default 8000
      */
@@ -233,11 +236,25 @@ export interface StrapiConfigHooks extends Record<string, any> {
   settings: StrapiConfigHookSettings;
 }
 export interface StrapiConfigMiddlewares extends Record<string, any> {
+  /**
+   * Defines the maximum allowed milliseconds to load a middleware
+   *
+   * @default 100
+   */
+  timeout?: number;
+  /**
+   * Configuration middleware loading
+   *
+   * @see https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#load-order
+   */
   load: {
     before: string[];
     order: string[];
     after: string[];
   };
+  /**
+   * Configuration of each middleware
+   */
   settings: StrapiConfigMiddlewareSettings;
 }
 export interface StrapiConfigAPI extends Record<string, any> {
@@ -247,7 +264,7 @@ export interface StrapiConfigAPI extends Record<string, any> {
   responses?: {
     /**
      * Set of globally defined attributes to be treated as private.
-     * E.g. _v when using MongoDb or timestamps like created_at, updated_at can be treated as private
+     * E.g. `_v` when using MongoDb or timestamps like `created_at`, `updated_at` can be treated as private
      */
     privateAttributes?: string[];
   };
@@ -256,13 +273,13 @@ export interface StrapiConfigAPI extends Record<string, any> {
    */
   rest?: {
     /**
-     * Specifies default _limit parameter used in API calls
+     * Specifies default `_limit` parameter used in API calls
      *
      * @default 100
      */
     defaultLimit?: number;
     /**
-     * 	Specifies max allowed number that can be requested as _limit.
+     * 	Specifies max allowed number that can be requested as `_limit`.
      *
      * @default null
      */
@@ -275,8 +292,21 @@ export interface StrapiConfigBaseHookSettings
   extends Record<string, any> {}
 export interface StrapiConfigBasePluginSettings
   extends Record<string, any> {}
-export interface StrapiConfigBaseMiddlewareSettings
+
+export interface StrapiConfigBaseMiddlewareSetting
   extends Record<string, any> {
+  /**
+   * Tells Strapi to run the middleware or not
+   *
+   * @default false
+   */
+  enabled?: boolean;
+}
+export interface StrapiConfigBaseMiddlewareSettings
+  extends Record<
+    string,
+    StrapiConfigBaseMiddlewareSetting | undefined
+  > {
   favicon?: {
     /**
      * Path to the favicon file
@@ -285,7 +315,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      */
     path?: string;
     /**
-     * Cache-control max-age directive in ms.
+     * Cache-control `max-age` directive in ms.
      *
      * @default 86400000
      */
@@ -305,7 +335,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      */
     maxAge?: number;
     /**
-     * Display default index page at / and /index.html
+     * Display default index page at `/` and `/index.html`
      *
      * @default true
      */
@@ -318,6 +348,10 @@ export interface StrapiConfigBaseMiddlewareSettings
      * @default false
      */
     enabled?: boolean;
+    /**
+     * @default false
+     */
+    secure?: boolean;
   };
   logger?: {
     /**
@@ -327,7 +361,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      */
     level?: string;
     /**
-     * Expose logger in context so it can be used through strapi.log.info(‘my log’)
+     * Expose logger in context so it can be used through `strapi.log.info(‘my log’)`
      *
      * @default true
      */
@@ -415,7 +449,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      *
      * @default 'Strapi <strapi.io>'
      */
-    value?: boolean;
+    value?: string;
   };
   csp?: {
     /**
@@ -429,7 +463,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      *
      * @default undefined
      */
-    policy?: string;
+    policy?: string | string[];
   };
   p3p?: {
     /**
@@ -438,6 +472,10 @@ export interface StrapiConfigBaseMiddlewareSettings
      * @default false
      */
     enabled?: boolean;
+    /**
+     * @default ''
+     */
+    value?: string;
   };
   hsts?: {
     /**
@@ -480,6 +518,7 @@ export interface StrapiConfigBaseMiddlewareSettings
      * @default false
      */
     enabled?: boolean;
+    mode?: 'block' | 'report' | 'log';
   };
   cors?: {
     /**
@@ -489,15 +528,35 @@ export interface StrapiConfigBaseMiddlewareSettings
      */
     enabled?: boolean;
     /**
-     * Allowed URLs (http://example1.com, http://example2.com, ['http://www.example1.com', 'http://example1.com'] or allows everyone *)
+     * Allowed URLs
      *
+     * @example
+     * ```js
+     * {
+     *   "origin": '*'
+     * }
+     * ```
+     * @example
+     * ```js
+     * {
+     *   "origin": 'http://www.example1.com'
+     * }
+     * ```
+     * @example
+     * ```js
+     * {
+     *   "origin": ['http://www.example2.com', 'http://example2.com']
+     * }
+     * ```
      * @default '*'
      */
     origin?: string | string[];
     /**
      * Configures the Access-Control-Expose-Headers CORS header.
      *
-     * If not specified, no custom headers are exposed. Default value: ["WWW-Authenticate", "Server-Authorization"]
+     * If not specified, no custom headers are exposed.
+     *
+     * @default ['WWW-Authenticate', 'Server-Authorization']
      */
     expose?: string[];
     /**

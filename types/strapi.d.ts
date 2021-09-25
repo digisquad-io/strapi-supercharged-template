@@ -55,22 +55,22 @@ export interface Strapi<
   /**
    * This object contains APIs contained in the ./api folder.
    *
-   * And by using strapi.api[:name] you can access the controllers, services,
-   * the model definition and also the configurations of the ./api/:name folder
+   * And by using `strapi.api[:name]` you can access the `controllers`, `services`,
+   * the `model` definition and also the `configurations` of the `./api/:name` folder
    */
   api: API;
   components: COMPONENTS;
   /**
    * Returns an object that represents the configurations of the project.
    *
-   * Every JavaScript or JSON file located in the ./config folder will be parsed into the strapi.config object
+   * Every JavaScript or JSON file located in the `./config` folder will be parsed into the strapi.config object
    */
   config: CONFIG;
   /**
    * Returns an object of the controllers which is available in the project.
    *
-   * Every JavaScript file located in the ./api/**\/controllers folder will
-   * be parsed into the strapi.controllers object.
+   * Every JavaScript file located in the `./api/**\/controllers` folder will
+   * be parsed into the `strapi.controllers` object.
    * Thanks to this object, you can access every controller's actions everywhere in the project.
    *
    * Note: This object doesn't include the admin's controllers and plugin's controllers.
@@ -79,46 +79,51 @@ export interface Strapi<
   /**
    * Returns an object of the hooks available in the project.
    *
-   * Every folder that follows this pattern strapi-* and located in the ./node_modules
-   * or /hooks folder will be mounted into the strapi.hook object.
+   * Every folder that follows this pattern strapi-* and located in the `./node_modules`
+   * or `/hooks` folder will be mounted into the strapi.hook object.
    */
   hook: HOOK;
   /**
    * Returns an object of the middlewares available in the project.
    *
-   * Every folder in the ./middlewares folder will be also mounted into the strapi.middleware object.
+   * Every folder in the `./middlewares` folder will be also mounted into the `strapi.middleware` object.
    */
   middleware: MIDDLEWARE;
   /**
    * Returns an object of models available in the project.
    *
-   * Every JavaScript or JSON file located in the ./api/**\/models folders will
-   * be parsed into the strapi.models object. Also every strapi.models.** object is
+   * Every JavaScript or JSON file located in the `./api/**\/models` folders will
+   * be parsed into the `strapi.models` object. Also every `strapi.models.**` object is
    * merged with the model's instance returned by the ORM (Mongoose, Bookshelf).
    *
-   * It allows to call the ORM methods through the strapi.models.** object (ex: strapi.models.users.find())
+   * It allows to call the ORM methods through the `strapi.models.**` object
+   *
+   * @example
+   * ```js
+   * strapi.models.users.find()
+   * ```
    */
   models: MODELS;
   /**
    * Returns an object of services available in the project.
    *
-   * Every JavaScript file located in the ./api/**\/services folders
-   * will be parsed into the strapi.services object.
+   * Every JavaScript file located in the `./api/**\/services` folders
+   * will be parsed into the `strapi.services` object.
    */
   services: SERVICES;
   /**
    * Returns an object of plugins available within the project.
    *
-   * Each plugin object contains the associated controllers, models, services and configurations
+   * Each plugin object contains the associated `controllers`, `models`, `services` and `configurations`
    */
   plugins: PLUGINS;
 
   /**
-   * Returns the Koa instance
+   * Returns the `Koa` instance
    */
   app: StrapiApp;
   /**
-   * Returns the Logger (Pino) instance
+   * Returns the Logger `Pino` instance
    */
   log: StrapiLogger;
   /**
@@ -134,7 +139,7 @@ export interface Strapi<
   getModel: (modelKey: string, plugin?: string) => Model<any>;
 
   /**
-   * This object contains the controllers, models, services and configurations contained in the strapi-admin package
+   * This object contains the `controllers`, `models`, `services` and `configurations` contained in the `strapi-admin` package
    */
   admin: StrapiAdmin;
   connections: StrapiConnections;
@@ -159,11 +164,11 @@ export interface Strapi<
   fs: StrapiFs;
   isLoaded: Readonly<boolean>;
   /**
-   * Returns the Router (Joi router) instance
+   * Returns the Router `Joi router` instance
    */
   router: StrapiRouter;
   /**
-   * Returns the http.Server (opens new window)instance.
+   * Returns the `http.Server`.
    */
   server: StrapiServer;
   telemetry: StrapiTelemetry;
@@ -177,9 +182,9 @@ export interface Strapi<
   errors: StrapiErrors;
   initServer: () => void;
   /**
-   * Returns a function that parses the configurations, hooks, middlewares and APIs of your app.
+   * Returns a function that parses the `configurations`, `hooks`, `middlewares` and APIs of your app.
    *
-   * It also loads the middlewares and hooks with the previously loaded configurations.
+   * It also loads the `middlewares` and `hooks` with the previously loaded configurations.
    * This method could be useful to update references available through the strapi global variable
    * without having to restart the server.
    *
@@ -208,8 +213,8 @@ export interface Strapi<
   logStartupMessage: () => void;
   requireProjectBootstrap: () => void;
   /**
-   * Returns a function that loads the configurations, middlewares and hooks.
-   * Then, it executes the bootstrap file, freezes the global variable and listens the configured port.
+   * Returns a function that loads the `configurations`, `middlewares` and `hooks`.
+   * Then, it executes the `bootstrap` file, freezes the global variable and listens the configured port.
    */
   start: (callback: Function) => void;
   startWebhooks: (callback: Function) => void;
