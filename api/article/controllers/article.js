@@ -12,7 +12,7 @@ module.exports = {
    *
    * @param {import('/@internal/core').StrapiAppContext} ctx
    * @return {Promise<
-   *  import('/@api/article/models').Article[]
+   *  Partial<import('/@api/article/models').Article>[]
    * >}
    */
   async find(ctx) {
