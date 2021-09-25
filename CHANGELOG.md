@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.3...v0.1.4) (2021-09-25)
+
+
+### Features
+
+* **config:** add typing for all configuration (hooks, plugins, server, api, database, middlewares) ([0c51be0](https://github.com/digisquad-io/strapi-supercharged-template/commit/0c51be0d50c30735657966a09e4eef4b3481a31e))
+* **scripts:** add update all entity script example with function generator ([5c454b5](https://github.com/digisquad-io/strapi-supercharged-template/commit/5c454b581ced85f70d9e897a98f68ff6f3a49a0e))
+
+
+### Bug Fixes
+
+* **articles:** find return partial articles (sanitizeEntity result) ([d75d2ed](https://github.com/digisquad-io/strapi-supercharged-template/commit/d75d2ed431a5e89d75404d37f7f406b07b56f006))
+
 ### [0.1.3](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.2...v0.1.3) (2021-09-25)
 
 
