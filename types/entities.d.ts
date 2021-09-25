@@ -5,16 +5,13 @@ export interface Entity {
 }
 export interface CollectionEntity extends Entity {}
 export interface SingleTypeEntity extends Entity {}
-export interface Component extends Partial<Entity> {}
-export type RelationWith<T extends Partial<Entity>> =
-  | T
-  | number
-  | null;
+export interface Component extends Entity {
+  __component?: string;
+}
+export type RelationWith<T extends Entity> = T | number | null;
 
-export type ComponentField<T extends Component> = Partial<
-  RelationWith<T>
-> &
-  Record<string, any>;
+export type ComponentField<T extends Component> = Partial<T>;
+
 export type DateTimeField = string;
 export type TimeField = string;
 export type UIDField = string;
@@ -34,9 +31,9 @@ export type CreatorsFields = {
 };
 
 // @todo: strapi-plugin-user-permissions
-export type UserEntity = CollectionEntity & {};
-export type RoleEntity = CollectionEntity & {};
-export type PermissionEntity = CollectionEntity & {};
+export type UserEntity = CollectionEntity & Record<string, any>;
+export type RoleEntity = CollectionEntity & Record<string, any>;
+export type PermissionEntity = CollectionEntity & Record<string, any>;
 
 // @todo: strapi-plugin-upload
 export type FileEntity = Entity &
