@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('/@internal/base').StrapiBaseMiddleware} StrapiBaseMiddleware
+ */
+
 const createJoiRouter = require('koa-joi-router');
 
 /**
@@ -19,7 +23,7 @@ function createRouter() {
  * Sample middleware.
  * It inject a new koa-joi-router instance into strapi app.
  *
- * @return {import('/@internal/base').StrapiMiddlewareDefinition}
+ * @return {StrapiBaseMiddleware}
  */
 function sampleMiddleware() {
   return {

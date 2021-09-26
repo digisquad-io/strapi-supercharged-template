@@ -3,10 +3,19 @@ import type { SamplePluginMiddlewares } from './middlewares';
 import type { SamplePluginServices } from './services';
 export * as models from './models';
 
-export interface SamplePlugin {
+import type { StrapiBasePlugin } from '/@internal/base';
+import type { StrapiConfigBasePluginSettings } from '/@internal/config';
+
+export interface SamplePluginConfig
+  extends StrapiConfigBasePluginSettings {
+  optionalString?: string;
+}
+
+export interface SamplePlugin extends StrapiBasePlugin {
   controllers: SamplePluginControllers;
   middlewares: SamplePluginMiddlewares;
   services: SamplePluginServices;
+  config: SamplePluginConfig;
 }
 
 declare global {
@@ -21,8 +30,18 @@ declare global {
 
   // extends configuration for ./config/plugins.js
   interface StrapiConfigPluginSettings {
-    sample?: {
-      optionalString?: string;
-    };
+    sample?: SamplePluginConfig;
+  }
+
+  /**
+   * Register SampleMiddleware into global scope.
+   *
+   * same as: interface StrapiMiddleware extends SamplePluginMiddlewares {}
+   *
+   * @example strapi.middleware.sample: ReturnType<typeof SampleMiddleware>
+   */
+
+  interface StrapiMiddleware {
+    sample: SamplePluginMiddlewares['sample'];
   }
 }

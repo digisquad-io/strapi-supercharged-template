@@ -29,7 +29,7 @@ module.exports = {
     sourceType: 'module',
   },
   globals: {
-    strapi: false,
+    strapi: true,
     window: false,
     cy: false,
     Cypress: false,

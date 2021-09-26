@@ -2,9 +2,9 @@ import type { ArticleControllers } from './controllers';
 import type { ArticleServices } from './services';
 export * as models from './models';
 
-import { StrapiAPIDefinition } from '/@internal/base';
+import type { StrapiBaseAPI } from '/@internal/base';
 
-export interface ArticleAPI extends StrapiAPIDefinition {
+export interface ArticleAPI extends StrapiBaseAPI {
   controllers: ArticleControllers;
   services: ArticleServices;
 }

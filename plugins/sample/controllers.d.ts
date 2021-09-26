@@ -1,5 +1,5 @@
-import sample from './controllers/sample';
+import sampleController from './controllers/sample';
 
 export interface SamplePluginControllers {
-  sample: typeof sample;
+  sample: typeof sampleController;
 }

@@ -2,17 +2,17 @@ import type { Model } from 'bookshelf';
 import type { Entity } from './entities';
 import type { StrapiAdmin } from './admin';
 
-import type {
-  StrapiBaseApi,
-  StrapiBaseComponents,
-  StrapiBaseConfig,
-  StrapiBaseControllers,
-  StrapiBaseHook,
-  StrapiBaseMiddleware,
-  StrapiBaseModels,
-  StrapiBasePlugins,
-  StrapiBaseServices,
-} from './base';
+// import type {
+//   StrapiBaseApi,
+//   StrapiBaseComponents,
+//   StrapiBaseConfig,
+//   StrapiBaseControllers,
+//   StrapiBaseHook,
+//   StrapiBaseMiddleware,
+//   StrapiBaseModels,
+//   StrapiBasePlugins,
+//   StrapiBaseServices,
+// } from './base';
 import type { StrapiQuery } from './query';
 import type {
   StrapiDBManager,
@@ -42,15 +42,15 @@ import type {
 } from './core';
 
 export interface Strapi<
-  API extends StrapiBaseApi,
-  COMPONENTS extends StrapiBaseComponents,
-  CONFIG extends StrapiBaseConfig,
-  CONTROLLERS extends StrapiBaseControllers,
-  HOOK extends StrapiBaseHook,
-  MIDDLEWARE extends StrapiBaseMiddleware,
-  MODELS extends StrapiBaseModels,
-  SERVICES extends StrapiBaseServices,
-  PLUGINS extends StrapiBasePlugins
+  API extends StrapiApi,
+  COMPONENTS extends StrapiComponents,
+  CONFIG extends StrapiConfig,
+  CONTROLLERS extends StrapiControllers,
+  HOOK extends StrapiHook,
+  MIDDLEWARE extends StrapiMiddleware,
+  MODELS extends StrapiModels,
+  SERVICES extends StrapiServices,
+  PLUGINS extends StrapiPlugins
 > {
   /**
    * This object contains APIs contained in the ./api folder.

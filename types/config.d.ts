@@ -288,10 +288,30 @@ export interface StrapiConfigAPI extends Record<string, any> {
 }
 export interface StrapiConfigPlugins
   extends StrapiConfigPluginSettings {}
+
 export interface StrapiConfigBaseHookSettings
-  extends Record<string, any> {}
+  extends Record<string, any> {
+  /**
+   * Tells Strapi to load the hook or not
+   *
+   * @default false
+   */
+}
+
 export interface StrapiConfigBasePluginSettings
-  extends Record<string, any> {}
+  extends Record<string, any> {
+  /**
+   * Tells Strapi to run the plugin or not
+   *
+   * @default true
+   */
+  enabled?: boolean;
+
+  /**
+   * Routes are loaded from `[pluginSource]/config/routes.json`
+   */
+  routes?: Record<string, any>[];
+}
 
 export interface StrapiConfigBaseMiddlewareSetting
   extends Record<string, any> {

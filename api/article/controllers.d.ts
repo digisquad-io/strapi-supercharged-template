@@ -1,9 +1,10 @@
-import article from './controllers/article';
+import articleController from './controllers/article';
 import type { Article } from './models/article';
 import type { StrapiBaseCollectionController } from '/@internal/api';
 
 export interface ArticleControllers {
-  article: typeof article & StrapiBaseCollectionController<Article>;
+  article: typeof articleController &
+    StrapiBaseCollectionController<Article>;
 }
 
 declare global {

@@ -1,11 +1,13 @@
-'use-strict';
+/**
+ * @typedef {import('/@internal/core').StrapiAppContext} StrapiAppContext
+ */
 
 module.exports = {
   /**
    * Say hello to the user
    * [GET] /sample/hello
    *
-   * @param {import('/@internal/core').StrapiAppContext} ctx
+   * @param {StrapiAppContext} ctx
    * @return {Promise<void>}
    */
   hello: async (ctx) => {
@@ -18,7 +20,7 @@ module.exports = {
    * Return empty 200 response
    * [PUT] /sample/empty
    *
-   * @param {import('/@internal/core').StrapiAppContext} ctx
+   * @param {StrapiAppContext} ctx
    * @return {Promise<void>}
    */
   empty: async (ctx) => {

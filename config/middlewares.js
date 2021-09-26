@@ -12,5 +12,8 @@ module.exports = ({}) => ({
     cors: {
       enabled: true,
     },
+    sample: {
+      enabled: true,
+    },
   },
 });

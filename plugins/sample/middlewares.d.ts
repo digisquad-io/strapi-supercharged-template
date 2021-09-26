@@ -1,5 +1,5 @@
-import sample from './middlewares/sample';
+import sampleMiddleware from './middlewares/sample';
 
 export interface SamplePluginMiddlewares {
-  sample: typeof sample;
+  sample: ReturnType<typeof sampleMiddleware>;
 }
