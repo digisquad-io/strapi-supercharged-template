@@ -28,7 +28,7 @@ declare global {
     sample: SamplePlugin;
   }
 
-  // extends configuration for ./config/plugins.js
+  // // extends configuration for ./config/plugins.js
   interface StrapiConfigPluginSettings {
     sample?: SamplePluginConfig;
   }

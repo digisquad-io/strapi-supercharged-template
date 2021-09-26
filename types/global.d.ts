@@ -185,6 +185,8 @@ declare global {
   interface StrapiConfigMiddlewareSettings
     extends StrapiConfigBaseMiddlewareSettings {}
 
+  interface StrapiConfigPluginSettings extends Record<string, any> {}
+
   interface StrapiConfig extends Record<string, any> {
     host: string;
     port: number;
