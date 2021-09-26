@@ -25,6 +25,15 @@ export type DraftAndPublishFields = {
   published_at: DateTimeField | null;
 };
 
+export type LocalizationFields = {
+  locale: string;
+  localizations: {
+    id: number | string;
+    locale: string;
+    publishaed_at: DateTimeField;
+  }[];
+};
+
 export type CreatorsFields = {
   created_by: RelationWith<UserEntity>;
   updated_by: RelationWith<UserEntity>;
