@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.2.0...v0.3.0) (2021-09-27)
+
+
+### Features
+
+* add basic admin type config + improve plugin/middleware/hooks and their config ([0e1fa64](https://github.com/digisquad-io/strapi-supercharged-template/commit/0e1fa64d4809f2cba8cc320a1d70d342e2852704))
+* add localization fields ([d564fbc](https://github.com/digisquad-io/strapi-supercharged-template/commit/d564fbcbd9983d4f71ebaf9e05b093236d06c002))
+* **modules:** add empty-script-module.mjs example ([4bc8c21](https://github.com/digisquad-io/strapi-supercharged-template/commit/4bc8c212b7484fd451b8303469d404cfe4bff67c))
+* **query:** add filters type checking ([ef9763f](https://github.com/digisquad-io/strapi-supercharged-template/commit/ef9763f4772740c7f5677648b3fe17085125f581))
+
+
+### Bug Fixes
+
+* plugin configuration ([fd362a3](https://github.com/digisquad-io/strapi-supercharged-template/commit/fd362a33e590d3a2bd9cdab4e6d79e26d166d170))
+
 ## [0.2.0](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.1.4...v0.2.0) (2021-09-25)
 
 
