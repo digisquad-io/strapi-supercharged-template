@@ -2,76 +2,80 @@ import type { Model } from 'bookshelf';
 import type { Entity } from './entities';
 
 export type StrapiQueryPopulate = string[];
-export interface StrapiQueryFilters extends Record<string, any> {}
+export type FilterSuffix = 'eq' | 'ne';
+export type RangeSuffix = 'lt' | 'lte' | 'gt' | 'gte';
+export type ArrayFilterSuffix =
+  | 'in'
+  | 'nin'
+  | 'contains'
+  | 'ncontains'
+  | 'containss'
+  | 'ncontainss';
+export type BooleanSuffix = 'null';
+type Exclude<T, U> = T extends U ? never : T;
+export type StrapiWhereFieldFilters<T> = Partial<{
+  // eslint-disable-next-line no-unused-vars
+  [Key in keyof T]: string | number | boolean;
+}> & {
+  // eslint-disable-next-line no-unused-vars
+  [Key in `${Exclude<keyof T, symbol>}_${FilterSuffix}`]?:
+    | string
+    | number
+    | boolean;
+} & {
+  // eslint-disable-next-line no-unused-vars
+  [Key in `${Exclude<keyof T, symbol>}_${FilterSuffix}`]?:
+    | string
+    | number
+    | boolean;
+} & {
+  // eslint-disable-next-line no-unused-vars
+  [key in `${Exclude<keyof T, symbol>}_${RangeSuffix}`]?:
+    | string
+    | number;
+} & {
+  // eslint-disable-next-line no-unused-vars
+  [key in `${Exclude<keyof T, symbol>}_${ArrayFilterSuffix}`]?:
+    | string[]
+    | number[]
+    | boolean[];
+} & {
+  // eslint-disable-next-line no-unused-vars
+  [key in `${Exclude<keyof T, symbol>}_${BooleanSuffix}`]?: boolean;
+};
 
-// interface StrapiModelQueryFilters
-//   extends Record<string, any> {}
-
-// type FilterSuffix = 'eq' | 'ne';
-// type RangeSuffix = 'lt' | 'lte' | 'gt' | 'gte';
-// type ArrayFilterSuffix =
-//   | 'in'
-//   | 'nin'
-//   | 'contains'
-//   | 'ncontains'
-//   | 'containss'
-//   | 'ncontainss';
-// type BooleanSuffix = 'null';
-
-// export type StrapiWhereFieldFilters<
-//   T extends string | number | bigint | boolean | null | undefined
-// > = {
-//   [key in `${T}`]?: string | number | boolean;
-// } &
-//   {
-//     [key in `${T}_${FilterSuffix}`]?: string | number | boolean;
-//   } &
-//   {
-//     [key in `${T}_${RangeSuffix}`]?: string | number;
-//   } &
-//   {
-//     [key in `${T}_${ArrayFilterSuffix}`]?:
-//       | string[]
-//       | number[]
-//       | boolean[];
-//   } &
-//   {
-//     [key in `${T}_${BooleanSuffix}`]?: boolean;
-//   };
-
-// type StrapiQueryFilters<UID extends string> =
-//   StrapiModelQueryFilters[UID] & {
-//     _sort?: string;
-//     _start?: number;
-//     _publicationState?: 'live' | 'preview';
-//     _locale?: string;
-//     _limit?: number;
-//     _where?: StrapiModelQueryFilters[UID];
-//   };
+type StrapiQueryFilters<T> = StrapiWhereFieldFilters<T> & {
+  _sort?: string;
+  _start?: number;
+  _publicationState?: 'live' | 'preview';
+  _locale?: string;
+  _limit?: number;
+  _where?: StrapiWhereFieldFilters<T>;
+};
 
 export interface StrapiQueryOptions extends Record<string, any> {}
 
 export interface StrapiQuery<T extends Entity> {
   model: Model<any>;
   find: (
-    filters?: StrapiQueryFilters,
+    filters?: StrapiQueryFilters<T>,
     populate?: StrapiQueryPopulate
   ) => Promise<T[]>;
-  search: (filters?: StrapiQueryFilters) => Promise<T[]>;
+  search: (filters?: StrapiQueryFilters<T>) => Promise<T[]>;
   findOne: (
-    filters?: StrapiQueryFilters,
+    filters?: StrapiQueryFilters<T>,
     populate?: StrapiQueryPopulate
   ) => Promise<T | undefined>;
   create: (
     data: Partial<Omit<T, 'id'>>,
     options?: StrapiQueryOptions
   ) => Promise<T>;
-  count: (filters?: StrapiQueryFilters) => Promise<number>;
-  countSearch: (filters?: StrapiQueryFilters) => Promise<number>;
+  count: (filters?: StrapiQueryFilters<T>) => Promise<number>;
+  countSearch: (filters?: StrapiQueryFilters<T>) => Promise<number>;
   update: (
-    filters: StrapiQueryFilters,
+    filters: StrapiQueryFilters<T>,
     data: Partial<Omit<T, 'id'>>,
     options?: StrapiQueryOptions
   ) => Promise<T>;
-  delete: (filters: StrapiQueryFilters) => Promise<T>;
+  delete: (filters: StrapiQueryFilters<T>) => Promise<T>;
 }

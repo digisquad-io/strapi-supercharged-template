@@ -25,38 +25,38 @@ export interface StrapiBaseCollectionService<
   T extends CollectionEntity
 > {
   find(
-    params?: StrapiQueryFilters,
+    params?: StrapiQueryFilters<T>,
     populate?: StrapiQueryPopulate
   ): Promise<T[]>;
   findOne(
-    params?: StrapiQueryFilters,
+    params?: StrapiQueryFilters<T>,
     populate?: StrapiQueryPopulate
   ): Promise<T>;
-  count(params?: StrapiQueryFilters): Promise<number>;
+  count(params?: StrapiQueryFilters<T>): Promise<number>;
   create(
     data: Partial<Omit<T, 'id'>>,
     options?: { files: any }
   ): Promise<T>;
   update(
-    params: StrapiQueryFilters,
+    params: StrapiQueryFilters<T>,
     data: Partial<Omit<T, 'id'>>,
     options?: { files: any }
   ): Promise<T>;
-  delete(params?: StrapiQueryFilters): Promise<T>;
-  search(params?: StrapiQueryFilters): Promise<T[]>;
-  countSearch(params?: StrapiQueryFilters): Promise<number>;
+  delete(params?: StrapiQueryFilters<T>): Promise<T>;
+  search(params?: StrapiQueryFilters<T>): Promise<T[]>;
+  countSearch(params?: StrapiQueryFilters<T>): Promise<number>;
 }
 
 export interface StrapiBaseSingleTypeService<
   T extends SingleTypeEntity
 > {
   find(
-    params?: StrapiQueryFilters,
+    params?: StrapiQueryFilters<T>,
     populate?: StrapiQueryPopulate
   ): Promise<T>;
   createOrUpdate(
     data: Partial<Omit<T, 'id'>>,
     options?: { files: any }
   ): Promise<T>;
-  delete(params?: StrapiQueryFilters): Promise<T>;
+  delete(params?: StrapiQueryFilters<T>): Promise<T>;
 }
