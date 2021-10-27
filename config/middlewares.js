@@ -1,6 +1,6 @@
 /**
- * @param {import('/@internal/config').StrapiConfigContext} context
- * @return {import('/@internal/config').StrapiConfigMiddlewares}
+ * @param {import('strapi-supercharged').StrapiConfigContext} context
+ * @return {import('strapi-supercharged').StrapiConfigMiddlewares}
  */
 module.exports = ({}) => ({
   load: {

@@ -1,6 +1,6 @@
 /**
- * @param {import('/@internal/config').StrapiConfigContext} context
- * @return {import('/@internal/config').StrapiConfigPlugins}
+ * @param {import('strapi-supercharged').StrapiConfigContext} context
+ * @return {import('strapi-supercharged').StrapiConfigPlugins}
  */
 module.exports = ({}) => ({
   sample: {

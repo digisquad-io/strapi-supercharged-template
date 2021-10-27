@@ -19,7 +19,6 @@
     "declaration": false,
     "outDir": "./never",
     "paths": {
-      "/@internal/*": ["./types/*"],
       "/@components/*": ["./components/*"],
       "/@api/*": ["./api/*"],
       "/@plugins/*": ["./plugins/*"]

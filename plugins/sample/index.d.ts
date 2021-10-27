@@ -3,8 +3,8 @@ import type { SamplePluginMiddlewares } from './middlewares';
 import type { SamplePluginServices } from './services';
 export * as models from './models';
 
-import type { StrapiBasePlugin } from '/@internal/base';
-import type { StrapiConfigBasePluginSettings } from '/@internal/config';
+import type { StrapiBasePlugin } from 'strapi-supercharged';
+import type { StrapiConfigBasePluginSettings } from 'strapi-supercharged';
 
 export interface SamplePluginConfig
   extends StrapiConfigBasePluginSettings {

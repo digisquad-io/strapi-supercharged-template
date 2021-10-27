@@ -1,6 +1,6 @@
 import articleService from './services/article';
 import type { Article } from './models/article';
-import type { StrapiBaseCollectionService } from '/@internal/api';
+import type { StrapiBaseCollectionService } from 'strapi-supercharged';
 
 export interface ArticleServices {
   article: typeof articleService &

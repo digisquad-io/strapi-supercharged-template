@@ -16,7 +16,7 @@ module.exports = {
    */
   articlesByProduct({ id }) {
     /**
-     * @type {import('/@internal/query').StrapiQuery<
+     * @type {import('strapi-supercharged').StrapiQuery<
      *  import('/@api/article/models').Article
      * >}
      */

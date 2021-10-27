@@ -1,6 +1,6 @@
 /**
- * @param {import('/@internal/config').StrapiConfigContext} context
- * @return {import('/@internal/config').StrapiConfigServer}
+ * @param {import('strapi-supercharged').StrapiConfigContext} context
+ * @return {import('strapi-supercharged').StrapiConfigServer}
  */
 module.exports = ({ env }) => ({
   host: env('STRAPI_SERVER_HOST', '0.0.0.0'),

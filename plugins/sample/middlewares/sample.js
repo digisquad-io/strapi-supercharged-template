@@ -1,5 +1,5 @@
 /**
- * @typedef {import('/@internal/base').StrapiBaseMiddleware} StrapiBaseMiddleware
+ * @typedef {import('strapi-supercharged').StrapiBaseMiddleware} StrapiBaseMiddleware
  */
 
 const createJoiRouter = require('koa-joi-router');

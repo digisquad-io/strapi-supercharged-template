@@ -2,7 +2,7 @@ import type { ArticleControllers } from './controllers';
 import type { ArticleServices } from './services';
 export * as models from './models';
 
-import type { StrapiBaseAPI } from '/@internal/base';
+import type { StrapiBaseAPI } from 'strapi-supercharged';
 
 export interface ArticleAPI extends StrapiBaseAPI {
   controllers: ArticleControllers;
@@ -15,7 +15,7 @@ declare global {
    *
    * @example strapi.api.article: ArticleAPI
    */
-  interface StrapiApi {
+  export interface StrapiApi {
     article: ArticleAPI;
   }
 }

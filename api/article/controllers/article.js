@@ -10,7 +10,7 @@ module.exports = {
   /**
    * Retrieve records.
    *
-   * @param {import('/@internal/core').StrapiAppContext} ctx
+   * @param {import('strapi-supercharged').StrapiAppContext} ctx
    * @return {Promise<
    *  Partial<import('/@api/article/models').Article>[]
    * >}
@@ -32,7 +32,7 @@ module.exports = {
    * List articles related to a product
    * [GET] /articles/product/:id
    *
-   * @param {import('/@internal/core').StrapiAppContext} ctx
+   * @param {import('strapi-supercharged').StrapiAppContext} ctx
    * @return {Promise<
    *  import('/@api/article/models').Article[]
    * >}

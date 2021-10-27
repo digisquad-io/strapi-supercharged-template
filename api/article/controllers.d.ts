@@ -1,6 +1,6 @@
 import articleController from './controllers/article';
 import type { Article } from './models/article';
-import type { StrapiBaseCollectionController } from '/@internal/api';
+import type { StrapiBaseCollectionController } from 'strapi-supercharged';
 
 export interface ArticleControllers {
   article: typeof articleController &
@@ -13,5 +13,5 @@ declare global {
    *
    * @example strapi.controllers.article: ArticleControllers
    */
-  interface StrapiControllers extends ArticleControllers {}
+  export interface StrapiControllers extends ArticleControllers {}
 }

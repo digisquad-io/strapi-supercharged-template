@@ -3,7 +3,7 @@ import type {
   TimestampFields,
   RelationWith,
   CollectionEntity,
-} from '/@internal/entities';
+} from 'strapi-supercharged';
 
 import type { models as SamplePluginModels } from '/@plugins/sample';
 import type { Metadata } from '/@components/meta/metadata';

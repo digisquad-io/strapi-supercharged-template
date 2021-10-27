@@ -2,7 +2,7 @@ import type {
   Component,
   FileEntity,
   RelationWith,
-} from '/@internal/entities';
+} from 'strapi-supercharged';
 
 export type Metadata = Component & {
   metaTitle: string;

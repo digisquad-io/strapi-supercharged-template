@@ -4,7 +4,7 @@ import type {
   TimestampFields,
   RelationWith,
   CollectionEntity,
-} from '/@internal/entities';
+} from 'strapi-supercharged';
 import type { Article } from '/@api/article/models';
 
 export type Product = CollectionEntity &

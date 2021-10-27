@@ -1666,10 +1666,10 @@
     "@types/connect" "*"
     "@types/node" "*"
 
-"@types/bookshelf@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@types/bookshelf/-/bookshelf-1.2.3.tgz#8a6841f99d8b18ee2a56cf963a89d60f82738823"
-  integrity sha512-uQEGn0qzty+45L42VLh7Ze1GuTvlZNOORbBjTY7+0cfFJqKbPXph/tSznFboqOkALLMZfwta+t9CWAAAd0nHag==
+"@types/bookshelf@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@types/bookshelf/-/bookshelf-1.2.5.tgz#8b2c9721e43d62858dd9571c8e075d434e5fb922"
+  integrity sha512-ZQzRNEZkpGJQAO2EZypHlS9RHSoXDTAQJpMbGACOgt0lffsf4mtkf1tREGv0DZ8h1o3kbLvmQZIHlWd2IJpAdA==
   dependencies:
     "@types/bluebird" "*"
     "@types/create-error" "*"
@@ -12320,6 +12320,20 @@ strapi-provider-upload-local@3.6.8:
   version "3.6.8"
   resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.6.8.tgz#4666269e96f2ae878f366ae091d09ea69fb0237b"
   integrity sha512-GkedrjO+T4DN649Ak0SMSS5Vdta0AoZRt9+IWLO9TGLZ7hjtIjnB60kGf0fQKspIhbS7DUqtwuzQAXTd8fXJOg==
+
+strapi-supercharged@0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/strapi-supercharged/-/strapi-supercharged-0.3.8.tgz#2052109be9b6dfaef51b47f4a323e37724bd54aa"
+  integrity sha512-I8NwuXhwHbxyHawlzwrXDhF9ht3HiAwjs2kIakdRVEgQxow2lm972oeyOmm+NQsru56dj8YwsQYUP5O3IsNhCQ==
+  dependencies:
+    "@types/bookshelf" "^1.2.5"
+    "@types/events" "3.0.0"
+    "@types/koa" "2.13.4"
+    "@types/koa-bodyparser" "4.3.3"
+    "@types/koa-joi-router" "8.0.2"
+    "@types/node" "16.9.6"
+    "@types/pino" "6.3.11"
+    "@types/request" "2.48.7"
 
 strapi-utils@3.6.8:
   version "3.6.8"

@@ -1,5 +1,5 @@
 /**
- * @typedef {import('/@internal/core').StrapiAppContext} StrapiAppContext
+ * @typedef {import('strapi-supercharged').StrapiAppContext} StrapiAppContext
  */
 
 module.exports = {
