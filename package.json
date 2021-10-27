@@ -1,6 +1,5 @@
 {
-  "name": "strapi-supercharged-template",
-  "private": true,
+  "name": "strapi-supercharged",
   "version": "0.3.0",
   "description": "A Strapi supercharged application",
   "author": {
@@ -10,8 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:digisquad-io/strapi-supercharged-template.git"
+    "url": "git@github.com:digisquad-io/strapi-supercharged.git"
   },
+  "types": "types",
+  "files": [
+    "types"
+  ],
   "strapi": {
     "uuid": "35d59bef-2343-4906-9e63-1b78f95028cb"
   },
