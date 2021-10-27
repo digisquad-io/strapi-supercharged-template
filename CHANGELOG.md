@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/digisquad-io/strapi-supercharged/compare/v0.3.0...v0.3.1) (2021-10-27)
+
+
+### Bug Fixes
+
+* add index typing ([3ab56c7](https://github.com/digisquad-io/strapi-supercharged/commit/3ab56c77136c2a70a3b641166a4836af6a208506))
+* article example ([2325c47](https://github.com/digisquad-io/strapi-supercharged/commit/2325c47d82be4f2c6558b9e706abd7adf8487599))
+
 ## [0.3.0](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.2.0...v0.3.0) (2021-09-27)
 
 
