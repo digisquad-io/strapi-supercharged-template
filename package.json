@@ -51,7 +51,8 @@
     "test:unit": "echo \"[warning] no unit test implemented yet\"",
     "commit": "commit",
     "release": "run-s test release:*",
-    "release:standard-version": "standard-version"
+    "release:standard-version": "standard-version",
+    "release:publish": "npm publish"
   },
   "devDependencies": {
     "@commitlint/cli": "13.1.0",

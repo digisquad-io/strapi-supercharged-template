@@ -23,7 +23,7 @@ module.exports = {
     const query = strapi.query('article', 'sample');
 
     return query.find({
-      product: id,
+      products: id,
     });
   },
 };
