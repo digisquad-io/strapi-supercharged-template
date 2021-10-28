@@ -12471,10 +12471,10 @@ strapi-provider-upload-local@3.6.8:
   resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.6.8.tgz#4666269e96f2ae878f366ae091d09ea69fb0237b"
   integrity sha512-GkedrjO+T4DN649Ak0SMSS5Vdta0AoZRt9+IWLO9TGLZ7hjtIjnB60kGf0fQKspIhbS7DUqtwuzQAXTd8fXJOg==
 
-strapi-supercharged@0.3.9:
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/strapi-supercharged/-/strapi-supercharged-0.3.9.tgz#3fd54811055b34d0cb36a7c798a108c480edcb30"
-  integrity sha512-3ooXjVSIR2M6MbmntSc4cUiCzMbIodNVf8aTwp9luYd7UL/hVpZ4LlQ6CbUyNOF2ozYfnHyA0ZuKI0Tjrp8dcw==
+strapi-supercharged@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/strapi-supercharged/-/strapi-supercharged-0.4.0.tgz#e0da288b2eb3abdc86cee76c2e63384f6885b4f3"
+  integrity sha512-P7FrxVg79qOICBQm3+YL4LN+5YiBckNrz+hBQ37cRh2FDrJTqWjiyAYg5Yw83FPpDkk4EMX9ogxG5TyC3EaDFQ==
   dependencies:
     "@types/bookshelf" "^1.2.5"
     "@types/events" "3.0.0"

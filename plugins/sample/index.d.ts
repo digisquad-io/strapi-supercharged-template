@@ -18,7 +18,7 @@ export interface SamplePlugin extends StrapiBasePlugin {
   config: SamplePluginConfig;
 }
 
-declare global {
+declare module 'strapi-supercharged' {
   /**
    * Register SamplePlugin into StrapiPlugins global scope.
    *

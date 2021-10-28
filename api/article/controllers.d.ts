@@ -7,7 +7,7 @@ export interface ArticleControllers {
     StrapiBaseCollectionController<Article>;
 }
 
-declare global {
+declare module 'strapi-supercharged' {
   /**
    * Register ArticleControllers into StrapiControllers global scope.
    *

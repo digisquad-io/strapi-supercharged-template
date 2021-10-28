@@ -9,7 +9,7 @@ export interface ArticleAPI extends StrapiBaseAPI {
   services: ArticleServices;
 }
 
-declare global {
+declare module 'strapi-supercharged' {
   /**
    * Register ArticleAPI into StrapiApi global scope.
    *

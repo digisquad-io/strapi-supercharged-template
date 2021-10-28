@@ -1,30 +1,29 @@
 'use strict';
-const { sanitizeEntity } = require('strapi-utils');
 
 /**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
+ * @typedef {import('strapi-supercharged').StrapiAppContext} StrapiAppContext
+ * @typedef {import('/@api/article/models').Article} Article
  */
+
+const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
   /**
    * Retrieve records.
    *
-   * @param {import('strapi-supercharged').StrapiAppContext} ctx
-   * @return {Promise<
-   *  Partial<import('/@api/article/models').Article>[]
-   * >}
+   * @param {StrapiAppContext} ctx
+   * @return {Promise<Partial<Article>[]>}
    */
   async find(ctx) {
-    let entities;
+    let articles = [];
     if (ctx.query._q) {
-      entities = await strapi.services.article.search(ctx.query);
+      articles = await strapi.services.article.search(ctx.query);
     } else {
-      entities = await strapi.services.article.find(ctx.query);
+      articles = await strapi.services.article.find(ctx.query);
     }
 
-    return entities.map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.article })
+    return articles.map((article) =>
+      sanitizeEntity(article, { model: strapi.models.article })
     );
   },
 
@@ -32,10 +31,8 @@ module.exports = {
    * List articles related to a product
    * [GET] /articles/product/:id
    *
-   * @param {import('strapi-supercharged').StrapiAppContext} ctx
-   * @return {Promise<
-   *  import('/@api/article/models').Article[]
-   * >}
+   * @param {StrapiAppContext} ctx
+   * @return {Promise<Partial<Article>[]>}
    */
   async findByProduct(ctx) {
     const { id } = ctx.params;
@@ -44,6 +41,20 @@ module.exports = {
       id,
     });
 
-    return articles;
+    return articles.map((article) =>
+      sanitizeEntity(article, { model: strapi.models.article })
+    );
+  },
+
+  /**
+   * This method raise TS2322 error
+   *
+   * @return {Article}
+   */
+  thisRaiseTSError() {
+    return {
+      // @ts-expect-error
+      foo: 'bar',
+    };
   },
 };

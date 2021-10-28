@@ -7,7 +7,7 @@ export interface ArticleServices {
     StrapiBaseCollectionService<Article>;
 }
 
-declare global {
+declare module 'strapi-supercharged' {
   /**
    * Register ArticleServices into StrapiServices global scope.
    *

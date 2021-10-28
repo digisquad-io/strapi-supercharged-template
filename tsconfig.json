@@ -22,7 +22,8 @@
       "/@components/*": ["./components/*"],
       "/@api/*": ["./api/*"],
       "/@plugins/*": ["./plugins/*"]
-    }
+    },
+    "types": ["strapi-supercharged"]
   },
   "include": [
     "**/*.d.ts",
