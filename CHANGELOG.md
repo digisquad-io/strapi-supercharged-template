@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.3.3...v0.4.0) (2021-10-28)
+
+
+### Features
+
+* update to supercharged 0.4.0 and update code examples ([9a9bee0](https://github.com/digisquad-io/strapi-supercharged-template/commit/9a9bee07a3ff40d1c9bfffe037f10ff9d30531cb))
+
 ### [0.3.3](https://github.com/digisquad-io/strapi-supercharged-template/compare/v0.3.1...v0.3.3) (2021-10-27)
 
 
