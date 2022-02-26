@@ -86,7 +86,7 @@
   "dependencies": {
     "knex": "0.95.11",
     "koa-joi-router": "8.0.0",
-    "pg": "8.7.1",
+    "pg": "8.7.3",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-bookshelf": "3.6.8",
