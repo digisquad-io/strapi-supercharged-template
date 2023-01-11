@@ -84,7 +84,7 @@
     "yorkie": "2.0.0"
   },
   "dependencies": {
-    "knex": "0.95.11",
+    "knex": "2.4.0",
     "koa-joi-router": "8.0.0",
     "pg": "8.7.1",
     "strapi": "3.6.8",
